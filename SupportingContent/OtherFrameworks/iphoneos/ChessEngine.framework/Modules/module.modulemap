@@ -1,0 +1,6 @@
+framework module ChessEngine {
+  umbrella header "ChessEngine.h"
+
+  export *
+  module * { export * }
+}
