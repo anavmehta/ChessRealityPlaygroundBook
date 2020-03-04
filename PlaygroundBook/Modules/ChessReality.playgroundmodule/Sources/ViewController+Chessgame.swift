@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ARKit
 import RealityKit
 
 extension ViewController {
@@ -621,7 +620,7 @@ extension ViewController {
     }
     
     func animate(sx: Int, sy: Int, tx: Int, ty: Int) {
-        if(animationEnabled) {
+        if(animationEnabled && !allowMultipeerPlay) {
             let entity: Entity! = arView.scene.findEntity(named: position[sx][sy])
             let (xt, yt, zt) = boardCoord(i: tx, j: ty, piece:entity2piece(str: position[sx][sy]))
             var translationTransform = entity.transform
@@ -712,7 +711,8 @@ extension ViewController {
     }
     func displayMove() {
 
-        let (sx, sy, tx, ty) = translateMove(move: bestMoveNext)
+        //let (sx, sy, tx, ty) = translateMove(move: bestMoveNext)
+        let (sx, sy, tx, ty) = (startPosXY.0, startPosXY.1, endPosXY.0, endPosXY.1)
         movePiece(sx: sx, sy: sy, tx: tx, ty: ty)
         bestMoveNext = ""
     }

@@ -7,8 +7,6 @@
 
 import UIKit
 import ARKit
-
-
 import RealityKit
 import MultipeerConnectivity
 
@@ -96,14 +94,10 @@ extension ViewController: ARSessionDelegate {
     /// - Tag: PeerJoined
     public func peerJoined(_ peer: MCPeerID) {
         sendARSessionIDTo(peers: [peer])
-        peerIdLabel.text = id(str: "\(String(describing: multipeerSession.clientPeerID))")
-        peerIdLabel.backgroundColor = .green
     }
     
     public func peerLeft(_ peer: MCPeerID) {
         peerSessionIDs.removeValue(forKey: peer)
-        peerIdLabel.text = ""
-        peerIdLabel.backgroundColor = .red
     }
     
     public func sendARSessionIDTo(peers: [MCPeerID]) {

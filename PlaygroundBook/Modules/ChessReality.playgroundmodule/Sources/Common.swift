@@ -138,12 +138,10 @@ public func move(str: String) {
     proxy?.send(.string("move "+String(str)))
 }
 
-public func analyze() {
-    playGroundVars.response = false
+public func analyze() -> String {
     proxy?.send(.string("analyze"))
-    repeat{
-        RunLoop.main.run(mode: .default, before: Date(timeIntervalSinceNow: 0.1))
-    } while playGroundVars.response == false
+    CFRunLoopRun()
+    return(playGroundVars.hintStr)
 }
 
 

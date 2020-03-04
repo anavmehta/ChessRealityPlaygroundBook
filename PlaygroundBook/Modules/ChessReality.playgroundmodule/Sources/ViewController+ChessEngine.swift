@@ -20,10 +20,6 @@ extension ViewController {
         print(gameFen)
         startAnalysis()
         CFRunLoopRun()
-        
-        //repeat{
-        //    RunLoop.main.run(mode: .default, before: Date(timeIntervalSinceNow: 0.5))
-        //} while (finishedAnalyzing == false)
         removeOverlay()
         let (sx, sy, tx, ty) = translateMove(move: bestMoveNext)
         displayCell(x: sx, y: sy)
@@ -39,10 +35,7 @@ extension ViewController {
         print(gameFen)
         startAnalysis()
         CFRunLoopRun()
-        /*
-        repeat{
-            RunLoop.main.run(mode: .default, before: Date(timeIntervalSinceNow: 0.5))
-        } while (finishedAnalyzing == false) */
+
         removeOverlay()
         displayMove()
         if(curColor == "w"){curColor = "b"}
@@ -93,7 +86,7 @@ extension ViewController {
         
     }
 }
- */
 
+*/
 
 

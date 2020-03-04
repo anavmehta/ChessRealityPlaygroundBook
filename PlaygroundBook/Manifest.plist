@@ -15,12 +15,13 @@
 	<key>SwiftVersion</key>
 	<string>$(SWIFT_VERSION)</string>
 	<key>Name</key>
-	<string>PlaygroundBookName</string>
+	<string>ChessRealityPlaygroundBook</string>
 	<key>Chapters</key>
 	<array>
 		<string>Chapter1.playgroundchapter</string>
 		<string>Chapter2.playgroundchapter</string>
 		<string>Chapter3.playgroundchapter</string>
+		<string>Chapter4.playgroundchapter</string>
 	</array>
 	<key>UserAutoImportedAuxiliaryModules</key>
 	<array/>

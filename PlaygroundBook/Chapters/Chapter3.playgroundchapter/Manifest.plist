@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Introduction to Multiuser</string>
+	<string>Introduction to Multiplayer</string>
 	<key>Pages</key>
 	<array>
 		<string>PlaygroundPage.playgroundpage</string>

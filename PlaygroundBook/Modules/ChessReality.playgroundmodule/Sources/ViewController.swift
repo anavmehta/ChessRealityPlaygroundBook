@@ -11,16 +11,19 @@ import RealityKit
 import MultipeerConnectivity
 import AVFoundation
 //import ChessEngine
-
 import PlaygroundSupport
+import SwiftChess
 
 
-public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer{//}, EngineManagerDelegate {
+public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer, GameDelegate {
+
+
+    //}, EngineManagerDelegate {
     
     //let engineManager: EngineManager = EngineManager()
     var audioPlayer: AVAudioPlayer!
     public var soundEnabled: Bool = true
-    public var animationEnabled: Bool = true
+    public var animationEnabled: Bool = false
     let audioFilePathWrong = Bundle.main.path(forResource:"wrong", ofType: "wav")
     let audioFilePathSafe = Bundle.main.path(forResource:"mallert 008", ofType: "mp3")
     let audioFilePathWon = Bundle.main.path(forResource:"crowd", ofType: "mp3")
@@ -51,6 +54,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
     var allowComputerPlay: Bool = false
     var allowMultipeerPlay: Bool = false
     var game: Entity!
+    var computer: Game!
     var gameAnchored: Bool = false
     var modelTapped: Bool = false
     
@@ -163,14 +167,16 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
     func play() {
         restartGame()
     }
-   
+   /*
      func setupChessEngine() {
      
      }
+ 
      
      func computerMove() {
      
      }
+ */
     
     func restartGame() {
         resetBoard()
@@ -201,6 +207,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         if(allowMultipeerPlay) {setupMultipeerSession()}
         if(allowComputerPlay) {setupChessEngine()}
         setupChessBoard()
+        //setupASCIIBoard()
         banner.text = "Select mode to play or tap on a horizontal surface to place chessboard"
         //presentCoachingOverlay()
     }

@@ -33,7 +33,7 @@ extension ViewController {
         if(finishedAnalyzing == false) {return}
         if(!planeAnchorAdded) {return}
          hintButton.setTitleColor(UIColor.red, for: .normal)
-        //let (_,_,_,_) = self.analyze()
+        let (_,_,_,_) = self.analyze()
         hintButton.setTitleColor(UIColor.green, for: .normal)
     }
     func setupViews() {

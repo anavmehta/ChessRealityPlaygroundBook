@@ -6,6 +6,7 @@
 	<string>Introduction to functions</string>
 	<key>Pages</key>
 	<array>
+		<string>Functions.cutscenepage</string>
 		<string>PlaygroundPage.playgroundpage</string>
 	</array>
 </dict>
