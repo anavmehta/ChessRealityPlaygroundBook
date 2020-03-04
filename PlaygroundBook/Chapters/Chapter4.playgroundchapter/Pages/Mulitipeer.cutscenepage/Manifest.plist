@@ -2,12 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Version</key>
+	<string>1.0</string>
 	<key>Name</key>
-	<string>Introduction to playing with computer</string>
-	<key>Pages</key>
-	<array>
-		<string>Mulitipeer.cutscenepage</string>
-		<string>PlaygroundPage.playgroundpage</string>
-	</array>
+	<string>Playing with another device</string>
+	<key>CutsceneReference</key>
+	<string>Chapter4.html</string>
 </dict>
 </plist>
