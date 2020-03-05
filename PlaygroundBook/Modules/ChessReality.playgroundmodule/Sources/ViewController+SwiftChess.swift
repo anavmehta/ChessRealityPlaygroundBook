@@ -67,7 +67,6 @@ extension ViewController {
                                        "- - - - - - - -" +
                                        "P P - - - - - -" +
                                        "G P - - - - - -" ) */
-        let tmp = get_ASCIIBoard(arr:position)
         let board = ASCIIBoard(pieces: get_ASCIIBoard(arr:position))
         
         let game = makeGameWithBoard(board: board.board, colorToMove: .white)
@@ -94,29 +93,25 @@ extension ViewController {
         let board = ASCIIBoard(pieces: get_ASCIIBoard(arr:position))
         if(curColor == "w") {colorToMove = SwiftChess.Color.white}
         else {colorToMove = SwiftChess.Color.black}
-        let game = makeGameWithBoard(board: board.board, colorToMove: colorToMove)
-        self.computer = game
-        game.delegate = self
-        self.computer.board.printBoardState()
-        guard let player = game.currentPlayer as? AIPlayer else {
+        let chessgame = makeGameWithBoard(board: board.board, colorToMove: colorToMove)
+        self.computer = chessgame
+        chessgame.delegate = self
+        //self.computer.board.printBoardState()
+        guard let player = chessgame.currentPlayer as? AIPlayer else {
             return (-1,-1,-1,-1)
         }
-        
         player.makeMoveAsync()
         CFRunLoopRun()
         removeOverlay()
         //let (sx, sy, tx, ty) = translateMove(move: bestMoveNext)
         displayCell(x: startPosXY.0, y: startPosXY.1)
-        displayCell(x: endPosXY.1, y: endPosXY.1)
+        displayCell(x: endPosXY.0, y: endPosXY.1)
         return(startPosXY.0, startPosXY.1, endPosXY.0, endPosXY.1)
     }
     
     func computerMove() {
         if(!computerPlays && allowComputerPlay) {return}
         (_,_,_,_) = analyze()
-
-        CFRunLoopRun()
-
         removeOverlay()
         displayMove()
         if(curColor == "w"){curColor = "b"}
@@ -174,7 +169,7 @@ extension ViewController {
         startPosXY = index2pos(index: piece.location.index)
         endPosXY = index2pos(index: toLocation.index)
         CFRunLoopStop(runLoop)
-        game.board.printBoardState()
+        //game.board.printBoardState()
     }
     
     public func gameDidTransformPiece(game: Game, piece: SwiftChess.Piece, location: BoardLocation) {

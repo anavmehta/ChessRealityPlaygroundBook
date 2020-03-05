@@ -7,7 +7,9 @@
 	<key>Pages</key>
 	<array>
 		<string>Computer.cutscenepage</string>
-		<string>PlaygroundPage.playgroundpage</string>
+		<string>PlaygroundPage1.playgroundpage</string>
+		<string>PlaygroundPage2.playgroundpage</string>
+		<string>PlaygroundPage3.playgroundpage</string>
 	</array>
 </dict>
 </plist>

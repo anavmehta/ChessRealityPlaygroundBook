@@ -28,14 +28,21 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
             switch strArr[0] {
             case "play":
                 play()
-            case "setMode":
-                self.setMode(mode: str2mode(str: String(strArr[1])))
+            case "mode":
+                self.mode(mode: str2mode(str: String(strArr[1])))
+                customSC.isHidden = true
+            case "color":
+                if(String(strArr[1]) == "w") {curColor = "w"}
+                else if(String(strArr[1]) == "b") {curColor = "b"}
             case "analyze":
                 (sx!,sy!,tx!,ty!) = analyze()
                 self.send(.string("analyze " + String(sx!) + " " + String(sy!) + " " + String(tx!) + " " + String(ty!)))
             case "sound":
                 if(strArr[1] == "true") {sound(enabled: true)}
                 else {sound(enabled: false)}
+            case "puzzle":
+                boardType = Int(strArr[1])!
+                setBoard()
             case "animation":
                 if(strArr[1] == "true") {animation(enabled: true)}
                 else {animation(enabled: false)}

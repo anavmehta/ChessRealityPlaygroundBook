@@ -28,6 +28,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
     let audioFilePathSafe = Bundle.main.path(forResource:"mallert 008", ofType: "mp3")
     let audioFilePathWon = Bundle.main.path(forResource:"crowd", ofType: "mp3")
     var bestMoveNext: String! = ""
+    var boardType: Int = 0
     var finishedAnalyzing: Bool = true {
         didSet {
             if(finishedAnalyzing == true) {
@@ -158,9 +159,10 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         // Dispose of any resources that can be recreated.
     }
     
-    func setMode(mode:PlayingMode) {
+    func mode(mode:PlayingMode) {
         allowComputerPlay = false
         allowMultipeerPlay = false
+        restartGame()
         if(mode == .Computer) {allowComputerPlay = true}
         else if(mode == .MultiDevice) {allowMultipeerPlay = true}
     }
@@ -216,7 +218,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         // Configure the AR session for horizontal plane tracking.
         let arConfiguration = ARWorldTrackingConfiguration()
         arConfiguration.planeDetection = .horizontal
-        //arConfiguration.isLightEstimationEnabled = true
+        arConfiguration.isLightEstimationEnabled = true
         arConfiguration.isCollaborationEnabled = true
         arView.session.run(arConfiguration)
     }
@@ -237,6 +239,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         arView = ARView.init(frame: UIScreen.main.bounds, cameraMode: .ar, automaticallyConfigureSession: true)
         self.view = arView
         arView.session.delegate = self
+
     }
     
     
@@ -419,8 +422,6 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         }
     } 
 }
-
-
 
 
 

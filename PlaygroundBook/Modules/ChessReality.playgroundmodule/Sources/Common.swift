@@ -25,6 +25,7 @@ struct PlayGroundVars {
     public var soundEnabled: Bool = true
     public var status: Int! = -1
     public var response: Bool = false
+    public var planeAnchorAdded: Bool = false
 }
 var playGroundVars: PlayGroundVars = PlayGroundVars()
 
@@ -53,6 +54,7 @@ public class PlaygroundListener: PlaygroundRemoteLiveViewProxyDelegate {
                 playGroundVars.hintStr = int2string(s:playGroundVars.hintSx)+String(playGroundVars.hintSy)+int2string(s:playGroundVars.hintTx)+String(playGroundVars.hintTy)
             case "wait":
                 CFRunLoopStop(runLoop)
+                playGroundVars.planeAnchorAdded = true
             default:
                 print("Not a recognized command")
             }
@@ -107,40 +109,52 @@ func string2int(s:String) -> Int {
  }
  
  
-public func sound(enabled: Bool) {
+public func sound(_ enabled: Bool) {
     proxy?.send(.string("sound "+String(enabled)))
 }
 
-public func animation(enabled: Bool) {
+public func animation(_ enabled: Bool) {
     proxy?.send(.string("animation "+String(enabled)))
 }
 
+public func puzzle(_ num: Int) {
+    proxy?.send(.string("puzzle "+String(num)))
+}
 
 
-public func setMode(mode: PlayingMode) {
+public func mode(_ mode: PlayingMode) {
     let str=mode2str(mode: mode)
     proxy?.send(.string("mode "+String(str)))
 }
 
 public func wait() {
+    if(playGroundVars.planeAnchorAdded) {return}
     CFRunLoopRun()
+}
+
+public func color(_ str: String) {
+    proxy?.send(.string("color "+str))
 }
 
 public func play() {
     proxy?.send(.string("play"))
 }
 
-public func tap(str: String) {
+public func tap(_ str: String) {
     proxy?.send(.string("tap "+String(str)))
 }
 
-public func move(str: String) {
+public func move(_ str: String) {
     proxy?.send(.string("move "+String(str)))
 }
 
 public func analyze() -> String {
+    playGroundVars.response = false
     proxy?.send(.string("analyze"))
     CFRunLoopRun()
+    repeat{
+        RunLoop.main.run(mode: .default, before: Date(timeIntervalSinceNow: 0.1))
+    } while playGroundVars.response == false
     return(playGroundVars.hintStr)
 }
 
