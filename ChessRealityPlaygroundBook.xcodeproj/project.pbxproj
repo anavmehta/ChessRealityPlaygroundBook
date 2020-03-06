@@ -25,7 +25,6 @@
 		BA2F946B240F5C3800381F1F /* SwiftChess.h in Sources */ = {isa = PBXBuildFile; fileRef = BA2F946A240F5C3800381F1F /* SwiftChess.h */; };
 		BA2F947424100B8900381F1F /* libSwiftChess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9140E8240F4CA700810E64 /* libSwiftChess.a */; };
 		BA2F947624100BD600381F1F /* libChessReality.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2F9AB2054BBF300191409 /* libChessReality.a */; };
-		BA9140EB240F4CA700810E64 /* SwiftChess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9140EA240F4CA700810E64 /* SwiftChess.swift */; };
 		BA9140FF240F4CC100810E64 /* BoardRaterCenterDominance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9140EF240F4CC000810E64 /* BoardRaterCenterDominance.swift */; };
 		BA914100240F4CC100810E64 /* BoardRaterCountPieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9140F0240F4CC000810E64 /* BoardRaterCountPieces.swift */; };
 		BA914101240F4CC100810E64 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9140F1240F4CC000810E64 /* Board.swift */; };
@@ -236,7 +235,6 @@
 		BA2F946A240F5C3800381F1F /* SwiftChess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftChess.h; sourceTree = "<group>"; };
 		BA9140DE240F2F5100810E64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9140E8240F4CA700810E64 /* libSwiftChess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftChess.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9140EA240F4CA700810E64 /* SwiftChess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChess.swift; sourceTree = "<group>"; };
 		BA9140EF240F4CC000810E64 /* BoardRaterCenterDominance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRaterCenterDominance.swift; sourceTree = "<group>"; };
 		BA9140F0240F4CC000810E64 /* BoardRaterCountPieces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRaterCountPieces.swift; sourceTree = "<group>"; };
 		BA9140F1240F4CC000810E64 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -414,7 +412,6 @@
 				5EA2E3BE2056F35A00416A35 /* LiveViewTestApp */,
 				5E2A7AE3204F628B00F4E17A /* Config Files */,
 				5EA2E3D52056F83400416A35 /* Supporting Content */,
-				BA9140E9240F4CA700810E64 /* SwiftChess */,
 				5E086DA4204F706E004D8D25 /* Products */,
 				BA9D2932240C7F7C009AA610 /* Frameworks */,
 			);
@@ -594,14 +591,6 @@
 				BA9140FE240F4CC100810E64 /* BoardStride.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		BA9140E9240F4CA700810E64 /* SwiftChess */ = {
-			isa = PBXGroup;
-			children = (
-				BA9140EA240F4CA700810E64 /* SwiftChess.swift */,
-			);
-			path = SwiftChess;
 			sourceTree = "<group>";
 		};
 		BA91411B240F4D8600810E64 /* Extensions */ = {
@@ -946,7 +935,6 @@
 				BA91411D240F4DBE00810E64 /* DictionaryRepresentable.swift in Sources */,
 				BA914109240F4CC100810E64 /* ASCIIBoard.swift in Sources */,
 				BA914105240F4CC100810E64 /* BoardOperation.swift in Sources */,
-				BA9140EB240F4CA700810E64 /* SwiftChess.swift in Sources */,
 				BA91410A240F4CC100810E64 /* AIPlayer.swift in Sources */,
 				BA914103240F4CC100810E64 /* BoardRaterBoardDominance.swift in Sources */,
 				BA91410C240F4CC100810E64 /* BoardRaterPawnProgression.swift in Sources */,

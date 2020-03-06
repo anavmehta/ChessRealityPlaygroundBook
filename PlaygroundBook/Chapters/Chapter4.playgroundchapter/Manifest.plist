@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Introduction to playing with computer</string>
+	<string>Multipeer Play</string>
 	<key>Pages</key>
 	<array>
-		<string>Mulitipeer.cutscenepage</string>
+		<string>Chapter4.cutscenepage</string>
 		<string>PlaygroundPage.playgroundpage</string>
 	</array>
 </dict>

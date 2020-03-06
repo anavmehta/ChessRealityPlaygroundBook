@@ -188,6 +188,9 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         banner.text = ""
         peerIdLabel.text = ""
         sessionInfoLabel.text = ""
+        selectedPiece = nil
+        startPosXY = (-1,-1)
+        endPosXY = (-1,-1)
         if(allowMultipeerPlay) {
             setupMultipeerSession()
             banner.text = "Wait for participants to join"

@@ -6,10 +6,11 @@
 	<string>Introduction to Multiplayer</string>
 	<key>Pages</key>
 	<array>
-		<string>Computer.cutscenepage</string>
+		<string>Chapter3.cutscenepage</string>
 		<string>PlaygroundPage1.playgroundpage</string>
 		<string>PlaygroundPage2.playgroundpage</string>
 		<string>PlaygroundPage3.playgroundpage</string>
+		<string>PlaygroundPage4.playgroundpage</string>
 	</array>
 </dict>
 </plist>

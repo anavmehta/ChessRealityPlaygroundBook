@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "401A3D8B-9CBC-4316-8C8B-E8A092637062"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlaygroundBook/Modules/ChessReality.playgroundmodule/Sources/ViewController+Chessgame.swift"

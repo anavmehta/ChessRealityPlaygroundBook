@@ -47,6 +47,7 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
                 if(strArr[1] == "true") {animation(enabled: true)}
                 else {animation(enabled: false)}
             case "move":
+                if(!planeAnchorAdded) {return}
                 _ = move(str: String(strArr[1]))
             case "tap":
                 tap(str: String(strArr[1]))

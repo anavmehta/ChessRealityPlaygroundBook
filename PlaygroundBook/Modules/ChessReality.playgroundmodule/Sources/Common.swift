@@ -51,7 +51,7 @@ public class PlaygroundListener: PlaygroundRemoteLiveViewProxyDelegate {
                 playGroundVars.hintSy = Int(strArr[2])!
                 playGroundVars.hintTx = Int(strArr[3])!
                 playGroundVars.hintTy = Int(strArr[4])!
-                playGroundVars.hintStr = int2string(s:playGroundVars.hintSx)+String(playGroundVars.hintSy)+int2string(s:playGroundVars.hintTx)+String(playGroundVars.hintTy)
+                playGroundVars.hintStr = int2string(s:playGroundVars.hintSx)+String(8-playGroundVars.hintSy)+int2string(s:playGroundVars.hintTx)+String(8-playGroundVars.hintTy)
             case "wait":
                 CFRunLoopStop(runLoop)
                 playGroundVars.planeAnchorAdded = true
@@ -151,7 +151,7 @@ public func move(_ str: String) {
 public func analyze() -> String {
     playGroundVars.response = false
     proxy?.send(.string("analyze"))
-    CFRunLoopRun()
+    //CFRunLoopRun()
     repeat{
         RunLoop.main.run(mode: .default, before: Date(timeIntervalSinceNow: 0.1))
     } while playGroundVars.response == false

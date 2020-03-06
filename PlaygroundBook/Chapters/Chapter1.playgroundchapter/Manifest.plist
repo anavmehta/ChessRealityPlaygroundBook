@@ -6,7 +6,7 @@
 	<string>Introduction to ChessReality</string>
 	<key>Pages</key>
 	<array>
-		<string>Introduction.cutscenepage</string>
+		<string>Chapter1.cutscenepage</string>
 		<string>PlaygroundPage.playgroundpage</string>
 	</array>
 </dict>

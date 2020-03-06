@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Introduction to functions</string>
+	<string>Playground Functions</string>
 	<key>Pages</key>
 	<array>
-		<string>Functions.cutscenepage</string>
+		<string>Chapter2.cutscenepage</string>
 		<string>PlaygroundPage.playgroundpage</string>
 	</array>
 </dict>
