@@ -1,10 +1,7 @@
-//
-//  ViewController+ChessEngine.swift
-//  ChessReality
-//
-//  Created by Anav Mehta on 2/10/20.
-//  Copyright © 2020 Apple. All rights reserved.
-//
+// ViewController+ChessEngine.swift
+// ChessReality
+// Created by Anav Mehta 3/5/2020
+// Copyright (c) 2020 Anav Mehta. All rights reserved
 
 import Foundation
 

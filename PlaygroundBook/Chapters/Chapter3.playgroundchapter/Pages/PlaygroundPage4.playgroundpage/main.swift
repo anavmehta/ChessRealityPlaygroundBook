@@ -1,8 +1,7 @@
 //: [Previous](@previous)
 /*:
- # Play with another device
- Select "Play with another device" from live view or use setMode
- Enjoy! 😊
+ # Chess Puzzle 2 - Enrico Paoli vs. Jan Foltys
+ This is the end game between Italian International chess master Enrico Paoli and the Czech International chess master  Jan Foltys, Trencianske Teplice,1949. Find the solution for back to win in 2.
  */
 //: [Next](@next)
 //#-hidden-code

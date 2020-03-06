@@ -2,6 +2,8 @@
 // ChessReality
 // Created by Anav Mehta 2/18/2020
 // Copyright (c) 2020 Anav Mehta. All rights reserved
+
+
 import Foundation
 import UIKit
 import PlaygroundSupport
@@ -129,6 +131,7 @@ public func mode(_ mode: PlayingMode) {
 
 public func wait() {
     if(playGroundVars.planeAnchorAdded) {return}
+    proxy?.send(.string("wait"))
     CFRunLoopRun()
 }
 

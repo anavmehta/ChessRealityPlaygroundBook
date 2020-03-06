@@ -2,7 +2,7 @@
 //  ViewController+Chessgame.swift
 //  ChessReality
 //
-//  Created by Anav Mehta on 2/10/20.
+//  Created by Anav Mehta on 3/05/20.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
@@ -1210,7 +1210,8 @@ extension ViewController {
     }
     
     
-    func tap(str: String) {
+    func tap(str: String) -> Bool{
+        if(!planeAnchorAdded) {return(false)}
         var start = str.index(str.startIndex, offsetBy: 0)
         var end = str.index(str.startIndex, offsetBy: 1)
         var range = start..<end
@@ -1223,25 +1224,26 @@ extension ViewController {
         let y = 8-Int(val)!
 
         if(selectedPiece == nil) {
-            if(position[x][y] == "") {return}
+            if(position[x][y] == "") {return(false)}
             selectedPiece = game.findEntity(named: position[x][y])
             moves = validMoves(x: x, y: y)
             if (moves.count == 0) {
                 alertController.message = selectedPiece.name + " selected piece cannot be moved"
                 self.present(alertController, animated: true, completion: nil)
                 selectedPiece = nil
-                return
+                return(false)
             }
             removeOverlay()
             displayValidMoves(x: x, y: y)
             startPosXY = (x, y)
         } else {
             if(!isValidMove(coord: (x, y), coords: moves)) {
-                return
+                return(false)
             }
             endPosXY = (x, y)
             movePiece(sx: startPosXY.0, sy: startPosXY.1, tx: endPosXY.0, ty: endPosXY.1)
         }
+        return(true)
     }
     
     func move(sx: Int, sy: Int, tx: Int, ty: Int) -> Bool{
@@ -1261,6 +1263,7 @@ extension ViewController {
     }
     
     func move(str: String) -> Bool {
+        if(!planeAnchorAdded) {return(false)}
         var start = str.index(str.startIndex, offsetBy: 0)
         var end = str.index(str.startIndex, offsetBy: 1)
         var range = start..<end

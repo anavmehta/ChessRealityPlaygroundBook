@@ -1,9 +1,7 @@
-/*
- See LICENSE folder for this sample’s licensing information.
- 
- Abstract:
- The sample app's main view controller.
- */
+// ViewController.swift
+// ChessReality
+// Created by Anav Mehta 3/5/2020
+// Copyright (c) 2020 Anav Mehta. All rights reserved
 
 import UIKit
 import ARKit

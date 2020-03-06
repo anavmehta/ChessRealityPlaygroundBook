@@ -3,6 +3,7 @@ See LICENSE folder for this sample’s licensing information.
 
 Abstract:
 A simple abstraction of the MultipeerConnectivity API as used in this app.
+ Most of the code here is from Apple sample apps.
 */
 
 import RealityKit

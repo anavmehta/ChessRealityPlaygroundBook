@@ -1,9 +1,11 @@
 //
-//  See LICENSE folder for this template’s licensing information.
+//  LiveView.swift
+//  ChessReality
 //
-//  Abstract:
-//  Instantiates a live view and passes it to the PlaygroundSupport framework.
+//  Created by Anav Mehta on 3/5/20.
+// Copyright (c) 2020 Anav Mehta. All rights reserved
 //
+
 
 import UIKit
 import ChessReality

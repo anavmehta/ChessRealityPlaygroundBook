@@ -1,8 +1,7 @@
 //: [Previous](@previous)
 /*:
- # Play with another device
- Select "Play with another device" from live view or use setMode
- Enjoy! 😊
+ # Chess Puzzle 1 James Mason vs. Georg Marco
+ The game between James Mason (white) and Georg Marko, Leipzig 1894, ended with a spectacular victory in two for the black.
  */
 //: [Next](@next)
 //#-hidden-code

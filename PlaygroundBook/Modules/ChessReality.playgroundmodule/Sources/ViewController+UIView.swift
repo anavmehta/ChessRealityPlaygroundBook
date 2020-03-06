@@ -2,7 +2,7 @@
 //  ViewController+UIView.swift
 //  ChessReality
 //
-//  Created by Anav Mehta on 2/19/20.
+//  Created by Anav Mehta on 3/05/20.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
@@ -30,9 +30,19 @@ extension ViewController {
     }
     
     @objc public func hinted(sender: UIButton!) {
-        if(finishedAnalyzing == false) {return}
-        if(!planeAnchorAdded) {return}
-         hintButton.setTitleColor(UIColor.red, for: .normal)
+        if(finishedAnalyzing == false) {
+            alertController.message = "Not finished analyzing yet"
+            playSound(sound: 0)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if(!planeAnchorAdded) {
+            alertController.message = "Please anchor the board first"
+            playSound(sound: 0)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        hintButton.setTitleColor(UIColor.red, for: .normal)
         let (_,_,_,_) = self.analyze()
         hintButton.setTitleColor(UIColor.green, for: .normal)
     }
@@ -42,10 +52,10 @@ extension ViewController {
         let defaultFont = "TimesNewRomanPSMT"
         //coachingOverlay.frame = UIScreen.main.bounds
         //self.view.addSubview(coachingOverlay)
-
-     
+        
+        
         var font=UIFont(name: defaultFont, size: 12)
-
+        
         customSC = UISegmentedControl(items: self.items)
         customSC.setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
         customSC.selectedSegmentIndex = 0
@@ -178,7 +188,7 @@ extension ViewController {
         //recordBanner.trailingAnchor.constraint(equalTo: self.hintButton.leadingAnchor).isActive = true
         recordBanner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         
-
+        
         
     }
 }

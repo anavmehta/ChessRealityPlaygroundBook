@@ -2,8 +2,10 @@
 //  ViewController+SwiftChess.swift
 //  ChessReality
 //
-//  Created by Anav Mehta on 3/3/20.
+//  Created by Anav Mehta on 3/5/20.
+// Copyright (c) 2020 Anav Mehta. All rights reserved
 //
+
 
 import Foundation
 import SwiftChess
@@ -83,6 +85,7 @@ extension ViewController {
     
     func analyze() -> (Int, Int, Int, Int) {
         var colorToMove: SwiftChess.Color
+        if(!planeAnchorAdded) {return (-1,-1,-1,-1)}
         if(selectedPiece != nil) {
             alertController.message = "Piece aleady selected tap to place"
             playSound(sound: 0)

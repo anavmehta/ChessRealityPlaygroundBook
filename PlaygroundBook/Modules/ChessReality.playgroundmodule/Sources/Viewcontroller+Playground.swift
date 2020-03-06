@@ -2,7 +2,7 @@
 //  ViewController+Playground.swift
 //  ChessReality
 //
-//  Created by Anav Mehta on 2/20/20.
+//  Created by Anav Mehta on 3/05/20.
 //  Copyright © 2020 Apple. All rights reserved.
 //
 
@@ -31,6 +31,8 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
             case "mode":
                 self.mode(mode: str2mode(str: String(strArr[1])))
                 customSC.isHidden = true
+            case "wait":
+                if(planeAnchorAdded) {self.send(.string("wait"))}
             case "color":
                 if(String(strArr[1]) == "w") {curColor = "w"}
                 else if(String(strArr[1]) == "b") {curColor = "b"}
@@ -47,10 +49,9 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
                 if(strArr[1] == "true") {animation(enabled: true)}
                 else {animation(enabled: false)}
             case "move":
-                if(!planeAnchorAdded) {return}
                 _ = move(str: String(strArr[1]))
             case "tap":
-                tap(str: String(strArr[1]))
+                _ = tap(str: String(strArr[1]))
             default:
                 print("Not a recognized command")
             }
