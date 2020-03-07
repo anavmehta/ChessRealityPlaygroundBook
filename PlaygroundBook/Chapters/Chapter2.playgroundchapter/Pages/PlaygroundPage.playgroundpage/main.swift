@@ -17,10 +17,11 @@ import ChessReality
 PlaygroundListener.shared.setup()
 //#-end-hidden-code
 //#-editable-code
-sound(enabled: true)
-animation(enabled: true)
+mode(.SingleDevice)
+sound(true)
+animation(true)
 wait()
-tap(str:"a2") //taps and selects pawn at a2
-tap(str:"a4") //second tap moves the piece to a4
-move(str:"a7a5")
+tap("e2") //taps and selects pawn at e2
+tap("e4") //second tap moves the piece to e4
+move("e7e5")
 //#-end-editable-code

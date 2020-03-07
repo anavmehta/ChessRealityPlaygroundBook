@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Multipeer Play</string>
+	<string>Playing With Another Device</string>
 	<key>Pages</key>
 	<array>
 		<string>Chapter4.cutscenepage</string>

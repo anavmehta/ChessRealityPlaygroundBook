@@ -160,9 +160,9 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
     func mode(mode:PlayingMode) {
         allowComputerPlay = false
         allowMultipeerPlay = false
-        restartGame()
         if(mode == .Computer) {allowComputerPlay = true}
         else if(mode == .MultiDevice) {allowMultipeerPlay = true}
+        restartGame()
     }
     func play() {
         restartGame()

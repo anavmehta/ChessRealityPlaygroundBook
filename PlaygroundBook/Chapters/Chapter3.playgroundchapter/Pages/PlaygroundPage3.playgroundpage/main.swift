@@ -14,12 +14,5 @@ PlaygroundListener.shared.setup()
 mode(.Computer)
 wait()
 puzzle(1)
-color("b")
-var bestMove = analyze()
-move(bestMove)
-color("w")
-bestMove = analyze()
-move(bestMove)
-
 
 //#-end-editable-code
