@@ -14,7 +14,8 @@ import Foundation
 import ChessReality
 PlaygroundListener.shared.setup()
 //#-end-hidden-code
-//#-editable-code
 mode(.MultiDevice)
 wait()
+//#-editable-code
+// You can write your own code with analyze() and move() to play against your opponent
 //#-end-editable-code

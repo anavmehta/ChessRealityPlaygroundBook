@@ -14,11 +14,14 @@ import MultipeerConnectivity
 /// Used to display the coaching overlay view and kick-off the search for a horizontal plane anchor.
 extension ViewController: ARCoachingOverlayViewDelegate {
     public func coachingOverlayViewWillActivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        /*
         // Ask the user to gather more data before placing the game into the scene
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             // Set the view controller as the delegate of the session to get updates per-frame
             self.arView.session.delegate = self
-        }
+        }*/
+    }
+    public func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
     }
 }
 
@@ -55,38 +58,6 @@ extension ViewController: ARSessionDelegate {
     
     public func session(_ session: ARSession, didUpdate frame: ARFrame) {
         updateSessionInfoLabel(for: frame, trackingState: frame.camera.trackingState)
-        /*
-         let screenCenter = CGPoint(x: arView.frame.midX, y: arView.frame.midY)
-         
-         let results = arView.hitTest(screenCenter, types: [.existingPlaneUsingExtent])
-         guard let result = results.first(where: { result -> Bool in
-         
-         // Ignore results that are too close or too far away to the camera when initially placing
-         guard result.distance > 0.25 && result.distance < 3.0 || self.coachingOverlay.isActive else {
-         return false
-         }
-         
-         // Make sure the anchor is a horizontal plane with a reasonable extent
-         guard let planeAnchor = result.anchor as? ARPlaneAnchor,
-         planeAnchor.alignment == .horizontal else {
-         return false
-         }
-         
-         // Make sure the horizontal plane has a reasonable extent
-         let extent = simd_length(planeAnchor.extent)
-         guard extent < 0.5  else {
-         return false
-         }
-         
-         return true
-         }),
-         let planeAnchor = result.anchor as? ARPlaneAnchor else {
-         return
-         }
-         self.planeAnchor = ARAnchor(name: "Base", transform: result.worldTransform)
-         self.arView.session.add(anchor: planeAnchor)
-         */
-        
         
     }
     
@@ -178,9 +149,10 @@ extension ViewController: ARSessionDelegate {
         coachingOverlay.activatesAutomatically = false
         self.coachingOverlay.setActive(true, animated: true)
     }
-    
+
     func removeCoachingOverlay() {
         // Remove the coaching overlay view
+        arView.debugOptions = []
         self.coachingOverlay.delegate = nil
         self.coachingOverlay.setActive(false, animated: false)
         self.coachingOverlay.removeFromSuperview()

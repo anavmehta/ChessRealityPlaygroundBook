@@ -13,12 +13,10 @@ import PlaygroundSupport
 import SwiftChess
 
 
-public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer, GameDelegate {
+public class ViewController: UIViewController, GameDelegate, //{
+PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
 
 
-    //}, EngineManagerDelegate {
-    
-    //let engineManager: EngineManager = EngineManager()
     var audioPlayer: AVAudioPlayer!
     public var soundEnabled: Bool = true
     public var animationEnabled: Bool = false
@@ -46,6 +44,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
     var customSC: UISegmentedControl!
     var peerSessionIDs = [MCPeerID: String]()
     var hintButton: UIButton! = UIButton()
+    public let hintImg = UIImage(named: "iconfinder_bulb_1511312")
     
     var gameFen: String = "position fen rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -"
     var castling: String = "-"
@@ -148,6 +147,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
             fatalError("could not create multipeerHelp.syncService")
         }
         arView.scene.synchronizationService = syncService
+
         
         
     }
@@ -183,7 +183,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         curColor = "w"
         recordBanner.text = ""
         fenBanner.text = ""
-        banner.text = ""
+        banner.text = "Tap on a horizontal surface to place chessboard"
         peerIdLabel.text = ""
         sessionInfoLabel.text = ""
         selectedPiece = nil
@@ -194,7 +194,7 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
             banner.text = "Wait for participants to join"
         }
         if(allowComputerPlay) {
-            banner.text = "Tap on a horizontal surface and to place chessboard"
+            banner.text = "Tap on a horizontal surface to place chessboard"
             setupChessEngine()
         }
     }
@@ -221,6 +221,8 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         arConfiguration.planeDetection = .horizontal
         arConfiguration.isLightEstimationEnabled = true
         arConfiguration.isCollaborationEnabled = true
+        arView.debugOptions = [.showFeaturePoints]
+        //arView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         arView.session.run(arConfiguration)
     }
     
@@ -278,7 +280,8 @@ public class ViewController: UIViewController,  PlaygroundLiveViewMessageHandler
         
         if let result = arView.raycast(
             from: touchInView,
-            allowing: .estimatedPlane, alignment: .horizontal
+            //allowing: .estimatedPlane, alignment: .horizontal
+            allowing:. existingPlaneGeometry, alignment: .horizontal
         ).first {
             if(!modelTapped && !planeAnchorAdded) {
                 if(!allowMultipeerPlay || ((multipeerSession != nil) &&

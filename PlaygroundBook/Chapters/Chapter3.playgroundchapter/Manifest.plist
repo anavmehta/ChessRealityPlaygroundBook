@@ -3,14 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>Playing With A Computer</string>
+	<string>Chess Engine</string>
 	<key>Pages</key>
 	<array>
 		<string>Chapter3.cutscenepage</string>
 		<string>PlaygroundPage1.playgroundpage</string>
 		<string>PlaygroundPage2.playgroundpage</string>
 		<string>PlaygroundPage3.playgroundpage</string>
-		<string>PlaygroundPage4.playgroundpage</string>
 	</array>
 </dict>
 </plist>

@@ -12,7 +12,7 @@ import Foundation
 import ChessReality
 PlaygroundListener.shared.setup()
 //#-end-hidden-code
-//#-editable-code
 mode(.Computer)
 wait()
+//#-editable-code
 //#-end-editable-code

@@ -54,7 +54,7 @@ extension ViewController {
         //self.view.addSubview(coachingOverlay)
         
         
-        var font=UIFont(name: defaultFont, size: 12)
+        var font=UIFont(name: defaultFont, size: 20)
         
         customSC = UISegmentedControl(items: self.items)
         customSC.setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
@@ -69,54 +69,55 @@ extension ViewController {
         customSC.translatesAutoresizingMaskIntoConstraints = false
         customSC.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         customSC.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1.0).isActive = true
-        customSC.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.04).isActive = true
+        customSC.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         customSC.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         customSC.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0).isActive = true
         
-        font=UIFont(name: defaultFont, size: 12)
         hintButton.setTitle("?", for: .normal)
+        hintButton.setImage(hintImg, for: .normal)
         hintButton.setTitleColor(UIColor.green, for: .normal)
         hintButton.addTarget(self, action: #selector(hinted(sender:)), for: .touchUpInside)
         self.view.addSubview(hintButton)
         
         hintButton.translatesAutoresizingMaskIntoConstraints = false
         hintButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = false
-        hintButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.04).isActive = true
+        hintButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         hintButton.widthAnchor.constraint(equalTo: self.hintButton.heightAnchor).isActive = true
         hintButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         hintButton.topAnchor.constraint(equalTo: self.customSC.bottomAnchor).isActive = true
         
+        font=UIFont(name: defaultFont, size: 16)
         sessionInfoLabel.font = font
         sessionInfoLabel.textAlignment = .center
-        sessionInfoLabel.backgroundColor = .black
-        sessionInfoLabel.textColor = .white
+        sessionInfoLabel.backgroundColor = .lightGray
+        sessionInfoLabel.textColor = .black
         //sessionInfoLabel.sizeToFit()
         sessionInfoLabel.adjustsFontSizeToFitWidth = true
         self.view.addSubview(sessionInfoLabel)
         
         sessionInfoLabel.translatesAutoresizingMaskIntoConstraints = false
         sessionInfoLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = false
-        sessionInfoLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.02).isActive = true
+        sessionInfoLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025).isActive = true
         sessionInfoLabel.topAnchor.constraint(equalTo: self.customSC.bottomAnchor).isActive = true
         sessionInfoLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         sessionInfoLabel.trailingAnchor.constraint(equalTo: self.hintButton.leadingAnchor).isActive = true
-        
+        font=UIFont(name: defaultFont, size: 20)
         banner.font = font
         banner.textAlignment = .center
-        banner.backgroundColor = .black
-        banner.textColor = .white
+        banner.backgroundColor = .lightGray
+        banner.textColor = .black
         //banner.sizeToFit()
         banner.adjustsFontSizeToFitWidth = true
         self.view.addSubview(banner)
         
         banner.translatesAutoresizingMaskIntoConstraints = false
         banner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = false
-        banner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.02).isActive = true
+        banner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025).isActive = true
         banner.topAnchor.constraint(equalTo: self.sessionInfoLabel.bottomAnchor).isActive = true
         banner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         banner.trailingAnchor.constraint(equalTo: self.hintButton.leadingAnchor).isActive = true
         
-        font=UIFont(name: defaultFont, size: 8)
+        font=UIFont(name: defaultFont, size: 12)
         idLabel.font = font
         idLabel.textAlignment = .center
         idLabel.backgroundColor = .red
@@ -153,12 +154,12 @@ extension ViewController {
         
         
         
-        font=UIFont(name: defaultFont, size: 10)
+        font=UIFont(name: defaultFont, size: 16)
         
         fenBanner.font = font
         fenBanner.textAlignment = .left
-        fenBanner.backgroundColor = .black
-        fenBanner.textColor = .white
+        fenBanner.backgroundColor = .lightGray
+        fenBanner.textColor = .black
         fenBanner.lineBreakMode = .byWordWrapping
         fenBanner.text = ""
         fenBanner.sizeToFit()
@@ -166,7 +167,7 @@ extension ViewController {
         
         fenBanner.translatesAutoresizingMaskIntoConstraints = false
         fenBanner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        fenBanner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.01).isActive = true
+        fenBanner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025).isActive = true
         fenBanner.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         //fenBanner.trailingAnchor.constraint(equalTo: self.hintButton.leadingAnchor).isActive = true
         fenBanner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
@@ -174,8 +175,8 @@ extension ViewController {
         
         recordBanner.font = font
         recordBanner.textAlignment = .left
-        recordBanner.backgroundColor = .black
-        recordBanner.textColor = .white
+        recordBanner.backgroundColor = .lightGray
+        recordBanner.textColor = .black
         recordBanner.lineBreakMode = .byWordWrapping
         recordBanner.text = ""
         recordBanner.sizeToFit()
@@ -183,7 +184,7 @@ extension ViewController {
         
         recordBanner.translatesAutoresizingMaskIntoConstraints = false
         recordBanner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        recordBanner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.02).isActive = true
+        recordBanner.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.05).isActive = true
         recordBanner.bottomAnchor.constraint(equalTo: self.fenBanner.topAnchor).isActive = true
         //recordBanner.trailingAnchor.constraint(equalTo: self.hintButton.leadingAnchor).isActive = true
         recordBanner.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true

@@ -19,7 +19,7 @@
 		5EBEC2F0205B399300975D3F /* LiveViewHost.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBEC2EF205B396500975D3F /* LiveViewHost.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EF2F97E2054B6E400191409 /* ManifestPlist.strings */; };
 		5EF2F9B72054E6FB00191409 /* Chapters in Copy Book Contents */ = {isa = PBXBuildFile; fileRef = 5EF2F9B62054E6F900191409 /* Chapters */; };
-		BA278AB0240DFE32000C002D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9D2996240C9EB6009AA610 /* libc++.tbd */; };
+		BA1815782413EA3600A720D5 /* iconfinder_bulb_1511312.png in Resources */ = {isa = PBXBuildFile; fileRef = BA1815772413EA3600A720D5 /* iconfinder_bulb_1511312.png */; };
 		BA278AB5240E01D9000C002D /* libChessReality.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF2F9AB2054BBF300191409 /* libChessReality.a */; };
 		BA2F9465240F505600381F1F /* ViewController+SwiftChess.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2F9464240F505600381F1F /* ViewController+SwiftChess.swift */; };
 		BA2F946B240F5C3800381F1F /* SwiftChess.h in Sources */ = {isa = PBXBuildFile; fileRef = BA2F946A240F5C3800381F1F /* SwiftChess.h */; };
@@ -52,7 +52,6 @@
 		BA9D2910240C5756009AA610 /* MultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D290D240C50D6009AA610 /* MultipeerSession.swift */; };
 		BA9D2911240C5756009AA610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2909240C50D6009AA610 /* ViewController.swift */; };
 		BA9D2912240C5756009AA610 /* ViewController+ARAnchorPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D290A240C50D6009AA610 /* ViewController+ARAnchorPlacement.swift */; };
-		BA9D2913240C5756009AA610 /* ViewController+ChessEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D290C240C50D6009AA610 /* ViewController+ChessEngine.swift */; };
 		BA9D2914240C5756009AA610 /* ViewController+Chessgame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2908240C50D6009AA610 /* ViewController+Chessgame.swift */; };
 		BA9D2915240C5756009AA610 /* Viewcontroller+Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D290E240C50D7009AA610 /* Viewcontroller+Playground.swift */; };
 		BA9D2916240C5756009AA610 /* ViewController+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2907240C50D6009AA610 /* ViewController+UIView.swift */; };
@@ -64,39 +63,6 @@
 		BA9D2921240C68FA009AA610 /* crowd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA9D291B240C68EC009AA610 /* crowd.mp3 */; };
 		BA9D2922240C68FE009AA610 /* mallert 008.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA9D291A240C68EC009AA610 /* mallert 008.mp3 */; };
 		BA9D2923240C6901009AA610 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = BA9D2918240C68EB009AA610 /* wrong.wav */; };
-		BA9D294E240C9C50009AA610 /* CommandQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2946240C9C31009AA610 /* CommandQueue.h */; };
-		BA9D294F240C9C50009AA610 /* CommandQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA9D294C240C9C32009AA610 /* CommandQueue.mm */; };
-		BA9D2950240C9C50009AA610 /* EngineController.h in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2948240C9C31009AA610 /* EngineController.h */; };
-		BA9D2951240C9C50009AA610 /* EngineController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA9D294A240C9C32009AA610 /* EngineController.mm */; };
-		BA9D2953240C9C50009AA610 /* EngineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9D294B240C9C32009AA610 /* EngineManager.m */; };
-		BA9D297C240C9CDD009AA610 /* tt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2956240C9CDB009AA610 /* tt.cpp */; };
-		BA9D297D240C9CDD009AA610 /* benchmark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2958240C9CDB009AA610 /* benchmark.cpp */; };
-		BA9D297E240C9CDD009AA610 /* notation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D295A240C9CDB009AA610 /* notation.cpp */; };
-		BA9D297F240C9CDD009AA610 /* psqt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D295B240C9CDC009AA610 /* psqt.cpp */; };
-		BA9D2980240C9CDD009AA610 /* ucioption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D295E240C9CDC009AA610 /* ucioption.cpp */; };
-		BA9D2981240C9CDD009AA610 /* iosextension.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2960240C9CDC009AA610 /* iosextension.mm */; };
-		BA9D2982240C9CDD009AA610 /* uci.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2961240C9CDC009AA610 /* uci.cpp */; };
-		BA9D2983240C9CDD009AA610 /* bitbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2963240C9CDC009AA610 /* bitbase.cpp */; };
-		BA9D2984240C9CDD009AA610 /* movepick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2966240C9CDC009AA610 /* movepick.cpp */; };
-		BA9D2985240C9CDD009AA610 /* evaluate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2967240C9CDC009AA610 /* evaluate.cpp */; };
-		BA9D2986240C9CDD009AA610 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2968240C9CDC009AA610 /* position.cpp */; };
-		BA9D2987240C9CDD009AA610 /* search.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D296A240C9CDC009AA610 /* search.cpp */; };
-		BA9D2988240C9CDD009AA610 /* pawns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D296C240C9CDD009AA610 /* pawns.cpp */; };
-		BA9D2989240C9CDD009AA610 /* endgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D296E240C9CDD009AA610 /* endgame.cpp */; };
-		BA9D298A240C9CDD009AA610 /* timeman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2970240C9CDD009AA610 /* timeman.cpp */; };
-		BA9D298B240C9CDD009AA610 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2971240C9CDD009AA610 /* thread.cpp */; };
-		BA9D298C240C9CDD009AA610 /* bitboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2974240C9CDD009AA610 /* bitboard.cpp */; };
-		BA9D298D240C9CDD009AA610 /* movegen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2977240C9CDD009AA610 /* movegen.cpp */; };
-		BA9D298E240C9CDD009AA610 /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2978240C9CDD009AA610 /* misc.cpp */; };
-		BA9D298F240C9CDD009AA610 /* material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D297A240C9CDD009AA610 /* material.cpp */; };
-		BA9D2995240C9E8D009AA610 /* tbprobe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9D2993240C9E8D009AA610 /* tbprobe.cpp */; };
-		BA9D29BF240CA89B009AA610 /* ChessEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = BA9D29BE240CA89A009AA610 /* ChessEngine.h */; };
-		BA9D29C2240CA89B009AA610 /* ChessEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = BA9D29BE240CA89A009AA610 /* ChessEngine.h */; };
-		BA9D29C3240CA89B009AA610 /* ChessEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = BA9D29BE240CA89A009AA610 /* ChessEngine.h */; };
-		BA9D29C6240CB1C5009AA610 /* ChessEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = BA9D29BE240CA89A009AA610 /* ChessEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA9D29C7240CB227009AA610 /* ChessEngine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BA9D29BE240CA89A009AA610 /* ChessEngine.h */; };
-		BA9D29D5240CB5F8009AA610 /* EngineManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BA9D29D4240CB5F8009AA610 /* EngineManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA9D29E1240D4EFF009AA610 /* EngineManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BA9D29D4240CB5F8009AA610 /* EngineManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -196,17 +162,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA9D293B240C9C1E009AA610 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				BA9D29E1240D4EFF009AA610 /* EngineManager.h in CopyFiles */,
-				BA9D29C7240CB227009AA610 /* ChessEngine.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -231,9 +186,9 @@
 		5EF2F97D2054B6E400191409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ManifestPlist.strings; sourceTree = "<group>"; };
 		5EF2F9AB2054BBF300191409 /* libChessReality.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChessReality.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		BA1815772413EA3600A720D5 /* iconfinder_bulb_1511312.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_bulb_1511312.png; sourceTree = "<group>"; };
 		BA2F9464240F505600381F1F /* ViewController+SwiftChess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SwiftChess.swift"; sourceTree = "<group>"; };
 		BA2F946A240F5C3800381F1F /* SwiftChess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftChess.h; sourceTree = "<group>"; };
-		BA9140DE240F2F5100810E64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA9140E8240F4CA700810E64 /* libSwiftChess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftChess.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9140EF240F4CC000810E64 /* BoardRaterCenterDominance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRaterCenterDominance.swift; sourceTree = "<group>"; };
 		BA9140F0240F4CC000810E64 /* BoardRaterCountPieces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardRaterCountPieces.swift; sourceTree = "<group>"; };
@@ -270,55 +225,6 @@
 		BA9D2919240C68EC009AA610 /* chess_pieces.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chess_pieces.usdz; sourceTree = "<group>"; };
 		BA9D291A240C68EC009AA610 /* mallert 008.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mallert 008.mp3"; sourceTree = "<group>"; };
 		BA9D291B240C68EC009AA610 /* crowd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crowd.mp3; sourceTree = "<group>"; };
-		BA9D293D240C9C1E009AA610 /* libChessEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChessEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA9D2946240C9C31009AA610 /* CommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandQueue.h; sourceTree = "<group>"; };
-		BA9D2948240C9C31009AA610 /* EngineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineController.h; sourceTree = "<group>"; };
-		BA9D294A240C9C32009AA610 /* EngineController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EngineController.mm; sourceTree = "<group>"; };
-		BA9D294B240C9C32009AA610 /* EngineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineManager.m; sourceTree = "<group>"; };
-		BA9D294C240C9C32009AA610 /* CommandQueue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CommandQueue.mm; sourceTree = "<group>"; };
-		BA9D2956240C9CDB009AA610 /* tt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tt.cpp; sourceTree = "<group>"; };
-		BA9D2957240C9CDB009AA610 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
-		BA9D2958240C9CDB009AA610 /* benchmark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = benchmark.cpp; sourceTree = "<group>"; };
-		BA9D2959240C9CDB009AA610 /* evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evaluate.h; sourceTree = "<group>"; };
-		BA9D295A240C9CDB009AA610 /* notation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = notation.cpp; sourceTree = "<group>"; };
-		BA9D295B240C9CDC009AA610 /* psqt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = psqt.cpp; sourceTree = "<group>"; };
-		BA9D295C240C9CDC009AA610 /* movepick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movepick.h; sourceTree = "<group>"; };
-		BA9D295D240C9CDC009AA610 /* endgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endgame.h; sourceTree = "<group>"; };
-		BA9D295E240C9CDC009AA610 /* ucioption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ucioption.cpp; sourceTree = "<group>"; };
-		BA9D295F240C9CDC009AA610 /* timeman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeman.h; sourceTree = "<group>"; };
-		BA9D2960240C9CDC009AA610 /* iosextension.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iosextension.mm; sourceTree = "<group>"; };
-		BA9D2961240C9CDC009AA610 /* uci.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uci.cpp; sourceTree = "<group>"; };
-		BA9D2962240C9CDC009AA610 /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
-		BA9D2963240C9CDC009AA610 /* bitbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitbase.cpp; sourceTree = "<group>"; };
-		BA9D2964240C9CDC009AA610 /* movegen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movegen.h; sourceTree = "<group>"; };
-		BA9D2965240C9CDC009AA610 /* iosextension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iosextension.h; sourceTree = "<group>"; };
-		BA9D2966240C9CDC009AA610 /* movepick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = movepick.cpp; sourceTree = "<group>"; };
-		BA9D2967240C9CDC009AA610 /* evaluate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = evaluate.cpp; sourceTree = "<group>"; };
-		BA9D2968240C9CDC009AA610 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = position.cpp; sourceTree = "<group>"; };
-		BA9D2969240C9CDC009AA610 /* tt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tt.h; sourceTree = "<group>"; };
-		BA9D296A240C9CDC009AA610 /* search.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = search.cpp; sourceTree = "<group>"; };
-		BA9D296B240C9CDC009AA610 /* bitboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitboard.h; sourceTree = "<group>"; };
-		BA9D296C240C9CDD009AA610 /* pawns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pawns.cpp; sourceTree = "<group>"; };
-		BA9D296D240C9CDD009AA610 /* notation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = notation.h; sourceTree = "<group>"; };
-		BA9D296E240C9CDD009AA610 /* endgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = endgame.cpp; sourceTree = "<group>"; };
-		BA9D296F240C9CDD009AA610 /* thread_win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_win32.h; sourceTree = "<group>"; };
-		BA9D2970240C9CDD009AA610 /* timeman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeman.cpp; sourceTree = "<group>"; };
-		BA9D2971240C9CDD009AA610 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
-		BA9D2972240C9CDD009AA610 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
-		BA9D2973240C9CDD009AA610 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = search.h; sourceTree = "<group>"; };
-		BA9D2974240C9CDD009AA610 /* bitboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitboard.cpp; sourceTree = "<group>"; };
-		BA9D2975240C9CDD009AA610 /* material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = material.h; sourceTree = "<group>"; };
-		BA9D2976240C9CDD009AA610 /* pawns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pawns.h; sourceTree = "<group>"; };
-		BA9D2977240C9CDD009AA610 /* movegen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = movegen.cpp; sourceTree = "<group>"; };
-		BA9D2978240C9CDD009AA610 /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
-		BA9D2979240C9CDD009AA610 /* uci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uci.h; sourceTree = "<group>"; };
-		BA9D297A240C9CDD009AA610 /* material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = material.cpp; sourceTree = "<group>"; };
-		BA9D297B240C9CDD009AA610 /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
-		BA9D2993240C9E8D009AA610 /* tbprobe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tbprobe.cpp; sourceTree = "<group>"; };
-		BA9D2994240C9E8D009AA610 /* tbprobe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbprobe.h; sourceTree = "<group>"; };
-		BA9D2996240C9EB6009AA610 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
-		BA9D29BE240CA89A009AA610 /* ChessEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChessEngine.h; sourceTree = "<group>"; };
-		BA9D29D4240CB5F8009AA610 /* EngineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,14 +251,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA9D293A240C9C1E009AA610 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA278AB0240DFE32000C002D /* libc++.tbd in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BA9D29E6240D7CC2009AA610 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,7 +268,6 @@
 				5E086DC02051C5A7004D8D25 /* ChessRealityPlaygroundBook.playgroundbook */,
 				5EF2F9AB2054BBF300191409 /* libChessReality.a */,
 				5EA2E3BD2056F35A00416A35 /* LiveViewTestApp.app */,
-				BA9D293D240C9C1E009AA610 /* libChessEngine.a */,
 				BA9140E8240F4CA700810E64 /* libSwiftChess.a */,
 			);
 			name = Products;
@@ -413,7 +310,6 @@
 				5E2A7AE3204F628B00F4E17A /* Config Files */,
 				5EA2E3D52056F83400416A35 /* Supporting Content */,
 				5E086DA4204F706E004D8D25 /* Products */,
-				BA9D2932240C7F7C009AA610 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -432,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				BA9140E2240F4B1500810E64 /* SwiftChess.playgroundmodule */,
-				BA9D2937240C9B51009AA610 /* ChessEngine.playgroundmodule */,
 				5E70679C23678D8A0094BDEF /* ChessReality.playgroundmodule */,
 			);
 			path = Modules;
@@ -503,6 +398,7 @@
 		5EF2F9792054B64800191409 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
+				BA1815772413EA3600A720D5 /* iconfinder_bulb_1511312.png */,
 				BA9D2919240C68EC009AA610 /* chess_pieces.usdz */,
 				BA9D291B240C68EC009AA610 /* crowd.mp3 */,
 				BA9D291A240C68EC009AA610 /* mallert 008.mp3 */,
@@ -601,106 +497,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BA9D2932240C7F7C009AA610 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BA9D2996240C9EB6009AA610 /* libc++.tbd */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BA9D2937240C9B51009AA610 /* ChessEngine.playgroundmodule */ = {
-			isa = PBXGroup;
-			children = (
-				BA9140DE240F2F5100810E64 /* Info.plist */,
-				BA9D29BE240CA89A009AA610 /* ChessEngine.h */,
-				BA9D2938240C9B69009AA610 /* Sources */,
-			);
-			path = ChessEngine.playgroundmodule;
-			sourceTree = "<group>";
-		};
-		BA9D2938240C9B69009AA610 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				BA9D29D4240CB5F8009AA610 /* EngineManager.h */,
-				BA9D2955240C9C9C009AA610 /* Engine */,
-				BA9D2946240C9C31009AA610 /* CommandQueue.h */,
-				BA9D294C240C9C32009AA610 /* CommandQueue.mm */,
-				BA9D2948240C9C31009AA610 /* EngineController.h */,
-				BA9D294A240C9C32009AA610 /* EngineController.mm */,
-				BA9D294B240C9C32009AA610 /* EngineManager.m */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		BA9D2955240C9C9C009AA610 /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				BA9D2992240C9E51009AA610 /* syzygy */,
-				BA9D2958240C9CDB009AA610 /* benchmark.cpp */,
-				BA9D2963240C9CDC009AA610 /* bitbase.cpp */,
-				BA9D2974240C9CDD009AA610 /* bitboard.cpp */,
-				BA9D296B240C9CDC009AA610 /* bitboard.h */,
-				BA9D296E240C9CDD009AA610 /* endgame.cpp */,
-				BA9D295D240C9CDC009AA610 /* endgame.h */,
-				BA9D2967240C9CDC009AA610 /* evaluate.cpp */,
-				BA9D2959240C9CDB009AA610 /* evaluate.h */,
-				BA9D2965240C9CDC009AA610 /* iosextension.h */,
-				BA9D2960240C9CDC009AA610 /* iosextension.mm */,
-				BA9D297A240C9CDD009AA610 /* material.cpp */,
-				BA9D2975240C9CDD009AA610 /* material.h */,
-				BA9D2978240C9CDD009AA610 /* misc.cpp */,
-				BA9D2962240C9CDC009AA610 /* misc.h */,
-				BA9D2977240C9CDD009AA610 /* movegen.cpp */,
-				BA9D2964240C9CDC009AA610 /* movegen.h */,
-				BA9D2966240C9CDC009AA610 /* movepick.cpp */,
-				BA9D295C240C9CDC009AA610 /* movepick.h */,
-				BA9D295A240C9CDB009AA610 /* notation.cpp */,
-				BA9D296D240C9CDD009AA610 /* notation.h */,
-				BA9D296C240C9CDD009AA610 /* pawns.cpp */,
-				BA9D2976240C9CDD009AA610 /* pawns.h */,
-				BA9D2968240C9CDC009AA610 /* position.cpp */,
-				BA9D2972240C9CDD009AA610 /* position.h */,
-				BA9D295B240C9CDC009AA610 /* psqt.cpp */,
-				BA9D296A240C9CDC009AA610 /* search.cpp */,
-				BA9D2973240C9CDD009AA610 /* search.h */,
-				BA9D296F240C9CDD009AA610 /* thread_win32.h */,
-				BA9D2971240C9CDD009AA610 /* thread.cpp */,
-				BA9D297B240C9CDD009AA610 /* thread.h */,
-				BA9D2970240C9CDD009AA610 /* timeman.cpp */,
-				BA9D295F240C9CDC009AA610 /* timeman.h */,
-				BA9D2956240C9CDB009AA610 /* tt.cpp */,
-				BA9D2969240C9CDC009AA610 /* tt.h */,
-				BA9D2957240C9CDB009AA610 /* types.h */,
-				BA9D2961240C9CDC009AA610 /* uci.cpp */,
-				BA9D2979240C9CDD009AA610 /* uci.h */,
-				BA9D295E240C9CDC009AA610 /* ucioption.cpp */,
-			);
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		BA9D2992240C9E51009AA610 /* syzygy */ = {
-			isa = PBXGroup;
-			children = (
-				BA9D2993240C9E8D009AA610 /* tbprobe.cpp */,
-				BA9D2994240C9E8D009AA610 /* tbprobe.h */,
-			);
-			path = syzygy;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		BA9D29C4240CB1A3009AA610 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA9D29D5240CB5F8009AA610 /* EngineManager.h in Headers */,
-				BA9D29C6240CB1C5009AA610 /* ChessEngine.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5E086DBF2051C5A7004D8D25 /* ChessRealityPlaygroundBook */ = {
@@ -779,24 +576,6 @@
 			productReference = BA9140E8240F4CA700810E64 /* libSwiftChess.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BA9D293C240C9C1E009AA610 /* ChessEngine */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BA9D2943240C9C1E009AA610 /* Build configuration list for PBXNativeTarget "ChessEngine" */;
-			buildPhases = (
-				BA9D29C4240CB1A3009AA610 /* Headers */,
-				BA9D2939240C9C1E009AA610 /* Sources */,
-				BA9D293A240C9C1E009AA610 /* Frameworks */,
-				BA9D293B240C9C1E009AA610 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ChessEngine;
-			productName = ChessEngine;
-			productReference = BA9D293D240C9C1E009AA610 /* libChessEngine.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -822,9 +601,6 @@
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1110;
 					};
-					BA9D293C240C9C1E009AA610 = {
-						CreatedOnToolsVersion = 11.1;
-					};
 				};
 			};
 			buildConfigurationList = 5E2A7AE0204F611300F4E17A /* Build configuration list for PBXProject "ChessRealityPlaygroundBook" */;
@@ -843,7 +619,6 @@
 				5E086DBF2051C5A7004D8D25 /* ChessRealityPlaygroundBook */,
 				5EF2F9AA2054BBF300191409 /* ChessReality */,
 				5EA2E3BC2056F35A00416A35 /* LiveViewTestApp */,
-				BA9D293C240C9C1E009AA610 /* ChessEngine */,
 				BA9140E7240F4CA700810E64 /* SwiftChess */,
 			);
 		};
@@ -854,6 +629,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1815782413EA3600A720D5 /* iconfinder_bulb_1511312.png in Resources */,
 				5EF2F97C2054B6E400191409 /* ManifestPlist.strings in Resources */,
 				5E551EC52371FC3F00784365 /* Assets.xcassets in Resources */,
 				BA9D291D240C68EC009AA610 /* chess_pieces.usdz in Resources */,
@@ -902,7 +678,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA9D29C2240CA89B009AA610 /* ChessEngine.h in Sources */,
 				5EA2E3C02056F35A00416A35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,10 +688,8 @@
 			files = (
 				BA9D290F240C5756009AA610 /* Common.swift in Sources */,
 				BA9D2910240C5756009AA610 /* MultipeerSession.swift in Sources */,
-				BA9D29BF240CA89B009AA610 /* ChessEngine.h in Sources */,
 				BA9D2911240C5756009AA610 /* ViewController.swift in Sources */,
 				BA9D2912240C5756009AA610 /* ViewController+ARAnchorPlacement.swift in Sources */,
-				BA9D2913240C5756009AA610 /* ViewController+ChessEngine.swift in Sources */,
 				BA9D2914240C5756009AA610 /* ViewController+Chessgame.swift in Sources */,
 				BA9D2915240C5756009AA610 /* Viewcontroller+Playground.swift in Sources */,
 				BA2F9465240F505600381F1F /* ViewController+SwiftChess.swift in Sources */,
@@ -953,40 +726,6 @@
 				BA914116240F4D1800810E64 /* Player.swift in Sources */,
 				BA914107240F4CC100810E64 /* BoardRaterThreatenedPieces.swift in Sources */,
 				BA914102240F4CC100810E64 /* BoardRaterCheckMateOpportunity.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA9D2939240C9C1E009AA610 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA9D298D240C9CDD009AA610 /* movegen.cpp in Sources */,
-				BA9D29C3240CA89B009AA610 /* ChessEngine.h in Sources */,
-				BA9D298E240C9CDD009AA610 /* misc.cpp in Sources */,
-				BA9D297E240C9CDD009AA610 /* notation.cpp in Sources */,
-				BA9D297D240C9CDD009AA610 /* benchmark.cpp in Sources */,
-				BA9D2989240C9CDD009AA610 /* endgame.cpp in Sources */,
-				BA9D298C240C9CDD009AA610 /* bitboard.cpp in Sources */,
-				BA9D294E240C9C50009AA610 /* CommandQueue.h in Sources */,
-				BA9D294F240C9C50009AA610 /* CommandQueue.mm in Sources */,
-				BA9D2988240C9CDD009AA610 /* pawns.cpp in Sources */,
-				BA9D2987240C9CDD009AA610 /* search.cpp in Sources */,
-				BA9D2986240C9CDD009AA610 /* position.cpp in Sources */,
-				BA9D297F240C9CDD009AA610 /* psqt.cpp in Sources */,
-				BA9D298A240C9CDD009AA610 /* timeman.cpp in Sources */,
-				BA9D2995240C9E8D009AA610 /* tbprobe.cpp in Sources */,
-				BA9D2985240C9CDD009AA610 /* evaluate.cpp in Sources */,
-				BA9D2983240C9CDD009AA610 /* bitbase.cpp in Sources */,
-				BA9D298F240C9CDD009AA610 /* material.cpp in Sources */,
-				BA9D2950240C9C50009AA610 /* EngineController.h in Sources */,
-				BA9D2984240C9CDD009AA610 /* movepick.cpp in Sources */,
-				BA9D2951240C9C50009AA610 /* EngineController.mm in Sources */,
-				BA9D2982240C9CDD009AA610 /* uci.cpp in Sources */,
-				BA9D2953240C9C50009AA610 /* EngineManager.m in Sources */,
-				BA9D298B240C9CDD009AA610 /* thread.cpp in Sources */,
-				BA9D2980240C9CDD009AA610 /* ucioption.cpp in Sources */,
-				BA9D297C240C9CDD009AA610 /* tt.cpp in Sources */,
-				BA9D2981240C9CDD009AA610 /* iosextension.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1072,7 +811,7 @@
 				PRODUCT_NAME = ChessRealityPlaygroundBook;
 				SKIP_INSTALL = NO;
 				SUPPORTS_MACCATALYST = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/Sources/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1096,7 +835,7 @@
 				PRODUCT_NAME = ChessRealityPlaygroundBook;
 				SKIP_INSTALL = NO;
 				SUPPORTS_MACCATALYST = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/Sources/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1236,7 +975,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -1265,7 +1004,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_PREFIX).LiveViewTestApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"\"$(OTHER_FRAMEWORKS_DIR)\"",
@@ -1285,7 +1024,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1301,7 +1040,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				SWIFT_OBJC_BRIDGING_HEADER = PlaygroundBook/Modules/ChessEngine.playgroundmodule/ChessEngine.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1353,38 +1092,6 @@
 			};
 			name = Release;
 		};
-		BA9D2944240C9C1E009AA610 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7J6D9RK7UH;
-				GCC_DYNAMIC_NO_PIC = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Debug;
-		};
-		BA9D2945240C9C1E009AA610 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7J6D9RK7UH;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1429,15 +1136,6 @@
 			buildConfigurations = (
 				BA9140ED240F4CA700810E64 /* Debug */,
 				BA9140EE240F4CA700810E64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BA9D2943240C9C1E009AA610 /* Build configuration list for PBXNativeTarget "ChessEngine" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BA9D2944240C9C1E009AA610 /* Debug */,
-				BA9D2945240C9C1E009AA610 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,9 +6,9 @@
 // Copyright (c) 2020 Anav Mehta. All rights reserved
 //
 
-
 import UIKit
 import ChessReality
 import PlaygroundSupport
+
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = ViewController()

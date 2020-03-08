@@ -1242,6 +1242,7 @@ extension ViewController {
             }
             endPosXY = (x, y)
             movePiece(sx: startPosXY.0, sy: startPosXY.1, tx: endPosXY.0, ty: endPosXY.1)
+            selectedPiece = nil
         }
         return(true)
     }

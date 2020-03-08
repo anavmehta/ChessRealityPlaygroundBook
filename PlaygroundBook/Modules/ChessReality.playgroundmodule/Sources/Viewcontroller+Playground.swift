@@ -10,7 +10,7 @@ import Foundation
 
 import PlaygroundSupport
 
-//extension ViewController : PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer{
+
 extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer{
     public func liveViewMessageConnectionOpened() {}
     

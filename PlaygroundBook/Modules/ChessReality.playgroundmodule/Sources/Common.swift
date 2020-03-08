@@ -53,7 +53,8 @@ public class PlaygroundListener: PlaygroundRemoteLiveViewProxyDelegate {
                 playGroundVars.hintSy = Int(strArr[2])!
                 playGroundVars.hintTx = Int(strArr[3])!
                 playGroundVars.hintTy = Int(strArr[4])!
-                playGroundVars.hintStr = int2string(s:playGroundVars.hintSx)+String(8-playGroundVars.hintSy)+int2string(s:playGroundVars.hintTx)+String(8-playGroundVars.hintTy)
+                if(playGroundVars.hintSx == -1) {playGroundVars.hintStr = ""}
+                else {playGroundVars.hintStr = int2string(s:playGroundVars.hintSx)+String(8-playGroundVars.hintSy)+int2string(s:playGroundVars.hintTx)+String(8-playGroundVars.hintTy)}
             case "wait":
                 CFRunLoopStop(runLoop)
                 playGroundVars.planeAnchorAdded = true
