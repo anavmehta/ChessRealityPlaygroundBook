@@ -10,7 +10,6 @@ import Foundation
 import ChessReality
 PlaygroundListener.shared.setup()
 //#-end-hidden-code
-mode(.Computer)
 wait()
 var bestMove = analyze()
 move(bestMove)

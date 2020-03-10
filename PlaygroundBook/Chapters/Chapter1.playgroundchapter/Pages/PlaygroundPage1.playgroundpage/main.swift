@@ -1,7 +1,8 @@
 /*:
  # Introduction to ChessReality
  It is the classic chess game of chess using Augmented Reality.
- First find a 20cmx20cm flat surface to place the chess board on. A single tap selects the piece and the second tap places the piece. Upon selecting the piece, the available moves are highlighted. You an either play the game in SingleDevice, Computer or with another player in Multipeer mode.
+ First find a 20cmx20cm flat surface to place the chess board on. As you point your camera on a horizontal surface, the feature debug points will focus and you can then place the board with a tap. After the board is placed, a single tap will select a piece and the second tap will place the piece. Upon selecting the piece, the available moves will be highlighted. When you capture a piece, it is removed from the board.
+ You an either play the game in SingleDevice, Computer or with another player in Multipeer mode.
  Enjoy! 😊
  */
 //: [Next](@next)
