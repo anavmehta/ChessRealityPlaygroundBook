@@ -40,7 +40,7 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
     var recordBanner:UILabel! = UILabel()
     var fenBanner:UILabel! = UILabel()
     var sessionInfoLabel: UILabel! = UILabel()
-    let items = ["Single device", "Play with Computer", "Play with opponent"]
+    let items = ["Single Device", "Play With Computer", "Play With Opponent"]
     var customSC: UISegmentedControl!
     var peerSessionIDs = [MCPeerID: String]()
     var hintButton: UIButton! = UIButton()

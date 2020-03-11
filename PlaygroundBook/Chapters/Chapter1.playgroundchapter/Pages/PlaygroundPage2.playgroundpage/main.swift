@@ -1,6 +1,6 @@
 /*:
- # Basic Playground
- You can set your mode and perform basic operations. Set the sound, animation and wait for the chessboard to be placed.
+ # Basic Simple Function Playground
+ Set your mode and perform basic operations. Set the sound, animation and wait for the chessboard to be placed.
  */
 //: [Next](@next)
 //#-hidden-code

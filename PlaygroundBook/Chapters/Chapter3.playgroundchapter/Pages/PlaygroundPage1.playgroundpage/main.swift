@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 /*:
- # Play with the computer
+ # Play With The Computer
  Select "Play with computer" from liveView or mode
  Use the green hint button "?" for analysis of best move
  Enjoy! 😊

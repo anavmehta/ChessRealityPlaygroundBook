@@ -154,7 +154,7 @@ extension ViewController {
         
         
         
-        font=UIFont(name: defaultFont, size: 16)
+        font=UIFont(name: defaultFont, size: 20)
         
         fenBanner.font = font
         fenBanner.textAlignment = .left

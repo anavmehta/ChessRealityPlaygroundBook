@@ -136,20 +136,20 @@ public func wait() {
     CFRunLoopRun()
 }
 
-public func color(_ str: String) {
-    proxy?.send(.string("color "+str))
+public func color(_ color: String) {
+    proxy?.send(.string("color "+color))
 }
 
 public func play() {
     proxy?.send(.string("play"))
 }
 
-public func tap(_ str: String) {
-    proxy?.send(.string("tap "+String(str)))
+public func tap(_ position: String) {
+    proxy?.send(.string("tap "+String(position)))
 }
 
-public func move(_ str: String) {
-    proxy?.send(.string("move "+String(str)))
+public func move(_ move: String) {
+    proxy?.send(.string("move "+String(move)))
 }
 
 public func analyze() -> String {
