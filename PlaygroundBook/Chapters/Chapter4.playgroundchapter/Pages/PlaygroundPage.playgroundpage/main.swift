@@ -1,10 +1,10 @@
 //: [Previous](@previous)
 /*:
  # Play with another device
- Select "Play with another device" from live view or use mode. 
- Pair with another device - you id and your peerid will turn green
- Tap on your device to place chessboard
- The first one who places the board plays white and first move
+ - Press **Run My Code** or "Play With Opponent" from LiveView and use **landscape** for best experience.
+ - Pair with another device - your id and your peerid will turn green when you pair.
+ - Tap on your device to place chessboard.
+ - The first one who places the board plays white.
  Enjoy! 😊
  */
 //: [Next](@next)

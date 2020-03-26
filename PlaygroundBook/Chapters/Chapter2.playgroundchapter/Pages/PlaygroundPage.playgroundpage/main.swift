@@ -14,6 +14,7 @@ A few functions were defined to use for the
     - taps the piece at position (Algebraic Notation) [a-h][1-8].
  - move(_ move: String)
     - moves the piece from position (Algebraic Notation) [a-h][1-8] to position [a-h][1-8].
+ - Press **Run My Code** and use **landscape** for best experience.
  Enjoy! 😊
  */
 //: [Next](@next)

@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 /*:
  # Play With The Computer
- Select "Play with computer" from liveView or mode
- Use the green hint button "?" for analysis of best move
+ - Use the green hint button "?" for analysis of best move.
+ - Press **Run My Code** or press "Play With Computer" in LiveView and use **landscape** for best experience
  Enjoy! 😊
  */
 //: [Next](@next)

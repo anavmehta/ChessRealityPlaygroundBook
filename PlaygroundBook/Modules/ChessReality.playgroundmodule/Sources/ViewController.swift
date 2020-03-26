@@ -19,7 +19,7 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
 
     var audioPlayer: AVAudioPlayer!
     public var soundEnabled: Bool = true
-    public var animationEnabled: Bool = false
+    public var animationEnabled: Bool = true
     let audioFilePathWrong = Bundle.main.path(forResource:"wrong", ofType: "wav")
     let audioFilePathSafe = Bundle.main.path(forResource:"mallert 008", ofType: "mp3")
     let audioFilePathWon = Bundle.main.path(forResource:"crowd", ofType: "mp3")
