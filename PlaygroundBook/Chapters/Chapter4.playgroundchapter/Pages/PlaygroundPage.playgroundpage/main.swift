@@ -2,9 +2,11 @@
 /*:
  # Play with another device
  - Press **Run My Code** or "Play With Opponent" from LiveView and use **landscape** for best experience.
+ - Move your camera around to help detection of horizontal feature points for better board placement.
  - Pair with another device - your id and your peerid will turn green when you pair.
  - Tap on your device to place chessboard.
  - The first one who places the board plays white.
+ 
  Enjoy! 😊
  */
 //: [Next](@next)

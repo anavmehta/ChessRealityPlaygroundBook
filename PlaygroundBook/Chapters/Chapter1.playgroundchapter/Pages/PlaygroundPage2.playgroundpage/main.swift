@@ -2,7 +2,9 @@
  # Basic Simple Function Playground
  - Set your mode and perform basic operations.
  - Set the sound, animation and wait for the chessboard to be placed.
- - Press **Run My Code** and use **landscape** for best experience.
+ - Remember:
+    - Press **Run My Code** and use **landscape** for best experience.
+    - Move your camera around to help detection of horizontal feature points for better board placement.
  */
 //: [Next](@next)
 //#-hidden-code

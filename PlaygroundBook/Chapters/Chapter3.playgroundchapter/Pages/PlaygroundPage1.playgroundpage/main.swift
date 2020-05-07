@@ -2,7 +2,9 @@
 /*:
  # Play With The Computer
  - Use the green hint button "?" for analysis of best move.
- - Press **Run My Code** or press "Play With Computer" in LiveView and use **landscape** for best experience
+ - Remember:
+    - Move your camera around to help detection of horizontal feature points for better board placement.
+    - Press **Run My Code** and use **landscape** for best experience.
  Enjoy! 😊
  */
 //: [Next](@next)

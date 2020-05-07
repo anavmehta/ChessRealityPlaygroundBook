@@ -620,10 +620,10 @@ extension ViewController {
     }
     
     func animate(sx: Int, sy: Int, tx: Int, ty: Int) {
-        //if(animationEnabled && !allowMultipeerPlay) {
-        if(animationEnabled) {
-            let entity: Entity! = self.game.findEntity(named: position[sx][sy])
-            //let entity: Entity! = arView.scene.findEntity(named: position[sx][sy])
+        if(animationEnabled && !allowMultipeerPlay) {
+        //if(animationEnabled) {
+            //let entity: Entity! = self.game.findEntity(named: position[sx][sy])
+            let entity: Entity! = arView.scene.findEntity(named: position[sx][sy])
             let (xt, yt, zt) = boardCoord(i: tx, j: ty, piece:entity2piece(str: position[sx][sy]))
             var translationTransform = entity.transform
             translationTransform.translation = SIMD3<Float>(x:xt,y:yt,z:zt)
@@ -1314,6 +1314,11 @@ extension ViewController {
         var range = start..<end
         let command = str[range]
         switch command {
+        case "left":
+            allowMultipeerPlay = false
+            allowComputerPlay = false
+            multipeerSession = nil
+            restartGame()
         case "move":
             start = str.index(str.startIndex, offsetBy: 5)
             end = str.index(str.startIndex, offsetBy: 6)

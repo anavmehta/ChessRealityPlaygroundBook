@@ -185,10 +185,19 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
         fenBanner.text = ""
         banner.text = "Tap on a horizontal surface to place chessboard"
         peerIdLabel.text = ""
+        peerIdLabel.backgroundColor = .clear
         sessionInfoLabel.text = ""
         selectedPiece = nil
         startPosXY = (-1,-1)
         endPosXY = (-1,-1)
+        if(multipeerSession != nil && !multipeerSession.connectedPeers.isEmpty) {
+            guard let myData = "left".data(using: .ascii) else {
+                return
+            }
+            multipeerSession.sendToAllPeers(myData)
+            multipeerSession.disconnect()
+        }
+        multipeerSession = nil
         if(allowMultipeerPlay) {
             setupMultipeerSession()
             banner.text = "Wait for participants to join"
@@ -277,11 +286,13 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
             return
         }
         sessionInfoLabel.text = ""
-        
+        let allowing: ARRaycastQuery.Target = .existingPlaneGeometry
+        //if(self.game != nil) {allowing = .estimatedPlane}
         if let result = arView.raycast(
             from: touchInView,
-            //allowing: .estimatedPlane, alignment: .horizontal
-            allowing:. existingPlaneGeometry, alignment: .horizontal
+            allowing: allowing,
+            //allowing:. existingPlaneGeometry,
+            alignment: .horizontal
         ).first {
             if(!modelTapped && !planeAnchorAdded) {
                 if(!allowMultipeerPlay || ((multipeerSession != nil) &&

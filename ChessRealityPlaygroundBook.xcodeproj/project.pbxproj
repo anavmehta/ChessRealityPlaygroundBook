@@ -89,13 +89,6 @@
 			remoteGlobalIDString = 5E086DBF2051C5A7004D8D25;
 			remoteInfo = PlaygroundBook;
 		};
-		5EA2E3D12056F36300416A35 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EF2F9AA2054BBF300191409;
-			remoteInfo = Book_Sources;
-		};
 		5EF2F9B42054BDD100191409 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
@@ -104,20 +97,6 @@
 			remoteInfo = Book_Sources;
 		};
 		BA2F947224100B7A00381F1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA9140E7240F4CA700810E64;
-			remoteInfo = SwiftChess;
-		};
-		BA2F947724100BE100381F1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA9140E7240F4CA700810E64;
-			remoteInfo = SwiftChess;
-		};
-		BA2F947924100C2600381F1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E2A7ADD204F611300F4E17A /* Project object */;
 			proxyType = 1;
@@ -512,7 +491,6 @@
 				5E086DD42051E415004D8D25 /* PBXBuildRule */,
 			);
 			dependencies = (
-				BA2F947A24100C2600381F1F /* PBXTargetDependency */,
 				5EF2F9B52054BDD100191409 /* PBXTargetDependency */,
 			);
 			name = ChessRealityPlaygroundBook;
@@ -533,9 +511,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BA2F947824100BE100381F1F /* PBXTargetDependency */,
 				5EA2E3D02056F36100416A35 /* PBXTargetDependency */,
-				5EA2E3D22056F36300416A35 /* PBXTargetDependency */,
 			);
 			name = LiveViewTestApp;
 			productName = LiveViewTestApp;
@@ -737,11 +713,6 @@
 			target = 5E086DBF2051C5A7004D8D25 /* ChessRealityPlaygroundBook */;
 			targetProxy = 5EA2E3CF2056F36100416A35 /* PBXContainerItemProxy */;
 		};
-		5EA2E3D22056F36300416A35 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5EF2F9AA2054BBF300191409 /* ChessReality */;
-			targetProxy = 5EA2E3D12056F36300416A35 /* PBXContainerItemProxy */;
-		};
 		5EF2F9B52054BDD100191409 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5EF2F9AA2054BBF300191409 /* ChessReality */;
@@ -751,16 +722,6 @@
 			isa = PBXTargetDependency;
 			target = BA9140E7240F4CA700810E64 /* SwiftChess */;
 			targetProxy = BA2F947224100B7A00381F1F /* PBXContainerItemProxy */;
-		};
-		BA2F947824100BE100381F1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BA9140E7240F4CA700810E64 /* SwiftChess */;
-			targetProxy = BA2F947724100BE100381F1F /* PBXContainerItemProxy */;
-		};
-		BA2F947A24100C2600381F1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BA9140E7240F4CA700810E64 /* SwiftChess */;
-			targetProxy = BA2F947924100C2600381F1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -802,6 +763,7 @@
 				DEVELOPMENT_TEAM = 7J6D9RK7UH;
 				GCC_DYNAMIC_NO_PIC = NO;
 				INSTALL_PATH = /;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -826,6 +788,7 @@
 				CURRENT_PROJECT_VERSION = "$(PLAYGROUND_BOOK_CONTENT_VERSION)";
 				DEVELOPMENT_TEAM = 7J6D9RK7UH;
 				INSTALL_PATH = /;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -890,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -945,7 +908,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -982,6 +945,7 @@
 					"\"$(OTHER_FRAMEWORKS_DIR)\"",
 					"$(inherited)",
 				);
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1010,6 +974,7 @@
 					"\"$(OTHER_FRAMEWORKS_DIR)\"",
 					"$(inherited)",
 				);
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
