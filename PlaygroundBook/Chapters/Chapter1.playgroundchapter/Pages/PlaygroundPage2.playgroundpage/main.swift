@@ -4,7 +4,7 @@
  - Set the sound, animation and wait for the chessboard to be placed.
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera around to help detection of horizontal feature points for better board placement.
+    - Move your camera before tapping for board placement for better detection of horizontal feature points.
  */
 //: [Next](@next)
 //#-hidden-code

@@ -4,7 +4,7 @@
  You an either play the game in SingleDevice, Computer or with another player in Multipeer mode - with another device with the same playgroundbook.
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera around to help detection of horizontal feature points for better board placement.
+    - Move your camera before tapping for board placement for better detection of horizontal feature points.
  Enjoy! 😊
   */
 //: [Next](@next)

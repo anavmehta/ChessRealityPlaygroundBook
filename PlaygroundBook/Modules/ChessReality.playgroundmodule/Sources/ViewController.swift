@@ -308,8 +308,14 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
                     
                     if(allowMultipeerPlay && !multipeerSession.connectedPeers.isEmpty) {
                         peerIdLabel.text = id(str: "\(String(describing: multipeerSession.clientPeerID))")
-                        if(self.owner) {banner.text = "You are white"}
-                        else {banner.text = "You are black"}
+                        if(self.owner) {
+                            banner.text = "You are white"
+                            peerToPlay = false
+                        }
+                        else {
+                            banner.text = "You are black"
+                            peerToPlay = true
+                        }
                         idLabel.backgroundColor = .green
                         peerIdLabel.backgroundColor = .green
                     }

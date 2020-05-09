@@ -1,13 +1,10 @@
 //: [Previous](@previous)
 /*:
- # Play Chess Puzzles
- - 0 : No puzzle
- - 1 : James Mason vs. Georg Marco The game between James Mason (white) and Georg Marko, Leipzig 1894,  ended with a spectacular victory in two for the black.
- - 2 : Enrico Paoli vs. Jan Foltys. This is the end game between Italian International chess master Enrico Paoli and the Czech Internation.  Jan Foltys, Trencianske Teplice,1949. Find the solution for back to win in 2.
- - Remember you can use the "Hint" bulb.
+ # Play Chess Puzzles puzzle()
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera around to help detection of horizontal feature points for better board placement.
+    - Move your camera before tapping for board placement for better detection of horizontal feature points.
+    - You can use the "Hint" bulb.
  */
 //: [Next](@next)
 //#-hidden-code
@@ -17,13 +14,12 @@ import ChessReality
 PlaygroundListener.shared.setup()
 //#-end-hidden-code
 /*:
-# Play a puzzle
  - puzzle(puzzle_number)
     - puzzle_number:
         - 0 : No puzzle
         - 1 : James Mason vs. Georg Marco The game between James Mason (white) and Georg Marko, Leipzig 1894, ended with a spectacular victory in two for the black.
         - 2 : Enrico Paoli vs. Jan Foltys. This is the end game between Italian International chess master Enrico Paoli and the Czech Internation.  Jan Foltys, Trencianske Teplice,1949. Find the solution for back to win in 2.
- - Remember you can use the "Hint" bulb.
+ - Remember you can use the "*Hint*" bulb.
 
 */
 mode(.SingleDevice)

@@ -2,11 +2,11 @@
 /*:
  # Computer+Playground
  - Use the power of the chess engine to determine best next moves in the playground.
- - Use the hint button to explore the best move.
+ - Use the hint **bulb** button to explore the best move.
  - Use the analyze() function in the playground
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera around to help detection of horizontal feature points for better board placement.
+    - Move your camera before tapping for board placement for better detection of horizontal feature points.
  */
 //: [Next](@next)
 //#-hidden-code

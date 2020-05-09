@@ -41,8 +41,14 @@ extension ViewController: ARSessionDelegate {
                 
             } else if anchor.name == "Base" {
                 sessionInfoLabel.text="Added plane anchor"
-                if(self.owner) {banner.text = "You are white - your turn to play"}
-                else {banner.text = "You are black"}
+                if(self.owner) {
+                    banner.text = "You are white - your turn to play"
+                    peerToPlay = false
+                }
+                else {
+                    banner.text = "You are black"
+                    peerToPlay = true
+                }
                 let anchorEntity = AnchorEntity(anchor: anchor)
                 planeAnchorAdded = true
                 if(self.game != nil) {anchorEntity.addChild(self.game)}
