@@ -1,6 +1,7 @@
 //: [Previous](@previous)
 /*:
- # Play with another device
+ # Play with Another Device
+ - Play with another using the same playgroundbook or the companion ChessReality app on the appstore.
  - Press **Run My Code** or "Play With Opponent" from LiveView and use **landscape** for best experience.
  - Pair with another device - your id and your peerid will turn green when you pair.
  - Move your camera before tapping for board placement for better detection of horizontal feature points.

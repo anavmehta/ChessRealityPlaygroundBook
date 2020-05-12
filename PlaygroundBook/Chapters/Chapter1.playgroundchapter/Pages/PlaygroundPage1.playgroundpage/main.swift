@@ -1,7 +1,8 @@
 /*:
  # Introduction to ChessReality
- Find a 20cmx20cm horizontal surface to place the chess board on. As you point your camera on a horizontal surface, the detected raw feature debug points per frame will focus and you can then place the board with a tap. After the board is placed, a single tap will select a piece and the second tap will place the piece. When a piece is selected, the available moves will be highlighted. When you capture a piece, it is removed from the board.
- You an either play the game in SingleDevice, Computer or with another player in Multipeer mode - with another device with the same playgroundbook.
+ Move your camera and debug feature points will help you place a 20cmx20cm chessboard with a tap on a horizontal surface. A single tap will select a piece displaying the legal moves and a second tap will place the piece.
+ 
+ Play in SingleDevice, Computer or with another player in MultiDevice mode.
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
     - Move your camera before tapping for board placement for better detection of horizontal feature points.

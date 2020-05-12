@@ -1,7 +1,6 @@
 /*:
- # Basic Simple Function Playground
- - Set your mode and perform basic operations.
- - Set the sound, animation and wait for the chessboard to be placed.
+ # ChessReality Simple Playground
+ - Introduces mode(), sound(), animation() and wait()
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
     - Move your camera before tapping for board placement for better detection of horizontal feature points.

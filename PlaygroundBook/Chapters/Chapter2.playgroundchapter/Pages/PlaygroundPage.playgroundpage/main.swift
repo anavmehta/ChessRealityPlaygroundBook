@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 /*:
- # Play Progammatically
- The functions which are introduced in this page are play(), mode(), sound(), animation(), tap(), move(), analyze(), color()
+ # Play Progammatically in Playground
+ - Introduces in detail play(), mode(), sound(), animation(), tap(), move(), analyze(), color()
  - Remember:
     - Press **Run My Code** and use **landscape** for best experience.
     - Move your camera before tapping for board placement for better detection of horizontal feature points.
@@ -25,7 +25,7 @@ play()
 /*:
 - mode(_ mode: PlayingMode)
    - Sets the playing mode
-   - mode: [PlayingMode.SingleDevice,PlayingMode.Computer,PlayingMode.MultiDevice]
+   - mode: [.SingleDevice,.Computer,.MultiDevice]
    - e.g. mode(.Computer) sets the playing mode with the computer
 */
 mode(/*#-editable-code set x*/.SingleDevice/*#-end-editable-code*/)
@@ -47,15 +47,15 @@ animation(/*#-editable-code animation enabled**/true/*#-end-editable-code*/)
 /*:
  - wait()
    - Wait for chessboard to be anchored.
-   - If the board is already anchored it returns immediately, or waits for the board to be anchored
+   - If the board is already anchored it returns immediately, else it waits for the board to be anchored
 */
 wait()
 /*:
  - tap(_ position: String)
     - Tap a location on the board
-      - On the first tap, if the location has a valid piece is selected and moves are highlighted.
-      - On the second tap, the selected piece is moved to a valid new location and piece captured if possible.
-    - position: Algebraic location of the board [a-h][1-8]
+      - On first tap, a valid piece is selected and legal moves are highlighted.
+      - On second tap, the selected piece is moved to a valid location and piece captured if possible.
+    - position: Algebraic location [a-h][1-8]
     - e.g. tap("c2")
 */
 tap(/*#-editable-code tap location*/"e2"/*#-end-editable-code*/) //taps and selects pawn at e2
@@ -63,19 +63,17 @@ tap(/*#-editable-code tap location*/"e4"/*#-end-editable-code*/) //second tap mo
 /*:
  - move(_ move: String)
     - This performs the two tap process to move the piece.
-    - move is of form "start_location"+"end_location"
-      - start_location: Start Algebraic location of the board [a-h][1-8]
-      - end_location: End Algebraic location of the board [a-h][1-8]
+    - move: Algebraic notation "start_location"+"end_location"
+      - start_location: Start Algebraic location [a-h][1-8]
+      - end_location: End Algebraic location [a-h][1-8]
     - e.g. move("c2c4")
 */
 move(/*#-editable-code move locations*/"e7e5"/*#-end-editable-code*/)
 /*:
  - bestMove = analyze()
-    - Analyze the board position for best move
-      -  This performs an analysis on the chess board with the current player (color)
-      -  You can also click on the "bulb" symbol and get a hint.
-      -   The hint will highlight the start location and the end location.
-    - The return value is in Algebraic notation form "start_location"+"end_location" which can be passed to the move() function.
+    - Analyzes the board position of the current player (color) and highlights the start and end location of the best move
+    - bestMove: Algebraic notation "start_location"+"end_location" (can be used in the move() function).
+    - Use the **bulb** button to perform the analysis in liveview and get a hint.
 */
 var bestMove = analyze()
 move(bestMove)
