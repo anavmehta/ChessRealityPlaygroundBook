@@ -34,6 +34,7 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
             case "wait":
                 if(planeAnchorAdded) {self.send(.string("wait"))}
             case "color":
+                if(allowMultipeerPlay) {return}
                 if(String(strArr[1]) == "w") {curColor = "w"}
                 else if(String(strArr[1]) == "b") {curColor = "b"}
             case "analyze":

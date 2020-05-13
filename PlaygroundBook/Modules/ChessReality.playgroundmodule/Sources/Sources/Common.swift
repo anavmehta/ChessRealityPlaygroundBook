@@ -131,7 +131,7 @@ public func mode(_ mode: PlayingMode) {
     proxy?.send(.string("mode "+String(str)))
 }
 
-public func wait() {
+public func wait_for_anchor() {
     if(playGroundVars.planeAnchorAdded) {return}
     proxy?.send(.string("wait"))
     CFRunLoopRun()

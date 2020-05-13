@@ -48,7 +48,12 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
     
     var gameFen: String = "position fen rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -"
     var castling: String = "-"
-    var curColor: String = "w"
+    var curColor: String = "w" {
+        didSet {
+            if(curColor == "w") {banner.text = "You are white"}
+            else {banner.text = "You are black"}
+        }
+    }
     var allowComputerPlay: Bool = false
     var allowMultipeerPlay: Bool = false
     var game: Entity!

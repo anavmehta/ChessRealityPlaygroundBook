@@ -2,9 +2,7 @@
 /*:
  # Play Progammatically in Playground
  - Introduces in detail play(), mode(), sound(), animation(), tap(), move(), analyze(), color()
- - Remember:
-    - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera before tapping for board placement for better detection of horizontal feature points.
+ - Remember to press **Run My Code** and use **landscape** for best experience. And move your camera before tapping for board placement for better detection of horizontal feature points. If you need a hint use the **yellow bulb** button.
  Enjoy! 😊
  */
 //: [Next](@next)
@@ -19,7 +17,7 @@ PlaygroundListener.shared.setup()
 //#-code-completion(identifier, show, true, false)
 /*:
  - play()
-    - This starts or resets the game in the mode it was set to.
+    - Starts or resets the game in the mode it was set to.
 */
 play()
 /*:
@@ -45,11 +43,11 @@ sound(/*#-editable-code sound enabled**/true/*#-end-editable-code*/)
 */
 animation(/*#-editable-code animation enabled**/true/*#-end-editable-code*/)
 /*:
- - wait()
+ - wait_for_anchor()
    - Wait for chessboard to be anchored.
    - If the board is already anchored it returns immediately, else it waits for the board to be anchored
 */
-wait()
+wait_for_anchor()
 /*:
  - tap(_ position: String)
     - Tap a location on the board
@@ -70,13 +68,13 @@ tap(/*#-editable-code tap location*/"e4"/*#-end-editable-code*/) //second tap mo
 */
 move(/*#-editable-code move locations*/"e7e5"/*#-end-editable-code*/)
 /*:
- - bestMove = analyze()
+ - best_move = analyze()
     - Analyzes the board position of the current player (color) and highlights the start and end location of the best move
-    - bestMove: Algebraic notation "start_location"+"end_location" (can be used in the move() function).
-    - Use the **bulb** button to perform the analysis in liveview and get a hint.
+    - best_move: Algebraic notation "start_location"+"end_location" (can be used in the move() function).
+    - Use the **yellow bulb** button to perform the analysis in liveview and get a hint.
 */
-var bestMove = analyze()
-move(bestMove)
+var best_move = analyze()
+move(best_move)
 /*:
  - color(_ color: String)
     - Override color of current play
@@ -86,6 +84,6 @@ move(bestMove)
  (In general, for a game you dont need to set this. After every move, the color is automatically changed. For analysis you can override the color of current player)
  */
 color("b")
-bestMove = analyze()
+best_move = analyze()
 //#-editable-code
 //#-end-editable-code

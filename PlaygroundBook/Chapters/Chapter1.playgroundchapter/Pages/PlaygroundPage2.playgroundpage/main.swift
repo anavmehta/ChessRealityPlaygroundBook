@@ -1,9 +1,7 @@
 /*:
  # ChessReality Simple Playground
- - Introduces mode(), sound(), animation() and wait()
- - Remember:
-    - Press **Run My Code** and use **landscape** for best experience.
-    - Move your camera before tapping for board placement for better detection of horizontal feature points.
+ - Introduces mode(), sound(), animation() and wait_for_anchor()
+ - Remember to press **Run My Code** and use **landscape** for best experience. And move your camera before tapping for board placement for better detection of horizontal feature points. If you need a hint use the **yellow bulb** button.
  */
 //: [Next](@next)
 //#-hidden-code
@@ -19,4 +17,4 @@ play()
 mode(.SingleDevice)
 sound(/*#-editable-code sound enabled*/true/*#-end-editable-code*/)
 animation(/*#-editable-code animation enabled*/true/*#-end-editable-code*/)
-wait()
+wait_for_anchor()
