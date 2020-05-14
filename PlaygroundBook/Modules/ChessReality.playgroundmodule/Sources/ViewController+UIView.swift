@@ -56,7 +56,7 @@ extension ViewController {
         
         var font=UIFont(name: defaultFont, size: 20)
         
-        customSC = UISegmentedControl(items: self.items)
+        //customSC = UISegmentedControl(items: self.items)
         customSC.setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
         customSC.selectedSegmentIndex = 0
         customSC.backgroundColor = .lightGray

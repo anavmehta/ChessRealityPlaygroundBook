@@ -14,8 +14,8 @@ PlaygroundListener.shared.setup()
  - puzzle(_ puzzle_number: Int))
     - puzzle_number: [0,1,2]
         - 0 : No puzzle
-        - 1 : James Mason vs. Georg Marco The game between James Mason (white) and Georg Marko, Leipzig 1894. Find the solution for black to win in 2.
-        - 2 : Enrico Paoli vs. Jan Foltys. This is the end game between Italian International chess master Enrico Paoli and the Czech Internation.  Jan Foltys, Trencianske Teplice,1949. Find the solution for black to win in 2.
+        - 1 : James Mason vs. Georg Marco, Leipzig 1894. Black to play and win in 2.
+        - 2 : Enrico Paoli  vs. Jan Foltys, Trencianske Teplice 1949. Black to play and win in 2.
 */
 mode(.SingleDevice)
 puzzle(/*#-editable-code puzzle_number*/1/*#-end-editable-code*/)
@@ -25,5 +25,4 @@ color("b") //black to move
 //Find the best move or uncomment the lines below the see what the chess engine discovers
 //var best_move = analyze()
 //move(best_move)
-//color("w") // white to move
 //#-end-editable-code

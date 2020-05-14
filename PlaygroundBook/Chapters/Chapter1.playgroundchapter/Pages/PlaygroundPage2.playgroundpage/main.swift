@@ -1,3 +1,4 @@
+//: [Previous](@previous)
 /*:
  # ChessReality Simple Playground
  - Introduces mode(), sound(), animation() and wait_for_anchor()

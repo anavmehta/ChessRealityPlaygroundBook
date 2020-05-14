@@ -14,6 +14,7 @@ public enum PlayingMode {
     case Computer
     case MultiDevice
 }
+let items = ["Single Device", "Play With Computer", "Play With Opponent"]
 
 let runLoop = CFRunLoopGetCurrent()
 
@@ -127,10 +128,11 @@ public func puzzle(_ num: Int) {
 
 public func mode(_ mode: PlayingMode) {
     let str=mode2str(mode: mode)
+    if (str == "") {return}
     proxy?.send(.string("mode "+String(str)))
 }
 
-public func wait() {
+public func wait_for_anchor() {
     if(playGroundVars.planeAnchorAdded) {return}
     proxy?.send(.string("wait"))
     CFRunLoopRun()

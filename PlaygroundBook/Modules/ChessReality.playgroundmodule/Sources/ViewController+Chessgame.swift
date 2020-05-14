@@ -1211,16 +1211,19 @@ extension ViewController {
     
     
     func tap(str: String) -> Bool{
+        if(str.count != 2) {return(false)}
         if(!planeAnchorAdded) {return(false)}
         var start = str.index(str.startIndex, offsetBy: 0)
         var end = str.index(str.startIndex, offsetBy: 1)
         var range = start..<end
         var val:String = String(str[range])
+        if(!charArray.contains(val)) {return(false)}
         let x = string2int(s: val)
         start = str.index(str.startIndex, offsetBy: 1)
         end = str.index(str.startIndex, offsetBy: 2)
         range = start..<end
         val = String(str[range])
+        if(!numArray.contains(val)) {return(false)}
         let y = 8-Int(val)!
 
         if(selectedPiece == nil) {
@@ -1242,6 +1245,7 @@ extension ViewController {
             }
             endPosXY = (x, y)
             movePiece(sx: startPosXY.0, sy: startPosXY.1, tx: endPosXY.0, ty: endPosXY.1)
+            changeColor()
             selectedPiece = nil
         }
         return(true)
@@ -1262,30 +1266,36 @@ extension ViewController {
         movePiece(sx: sx, sy: sy, tx: tx, ty: ty)
         return(true)
     }
-    
+
     func move(str: String) -> Bool {
+        if(str.count != 4) {return(false)}
         if(!planeAnchorAdded) {return(false)}
         var start = str.index(str.startIndex, offsetBy: 0)
         var end = str.index(str.startIndex, offsetBy: 1)
         var range = start..<end
         var val:String = String(str[range])
+        if(!charArray.contains(val)) {return(false)}
         let sx:Int = string2int(s: val)
         start = str.index(str.startIndex, offsetBy: 1)
         end = str.index(str.startIndex, offsetBy: 2)
         range = start..<end
         val = String(str[range])
+        if(!numArray.contains(val)) {return(false)}
         let sy:Int = 8-Int(val)!
+
         
         start = str.index(str.startIndex, offsetBy: 2)
         end = str.index(str.startIndex, offsetBy: 3)
         range = start..<end
         val = String(str[range])
+        if(!charArray.contains(val)) {return(false)}
         let tx:Int = string2int(s: val)
         
         start = str.index(str.startIndex, offsetBy: 3)
         end = str.index(str.startIndex, offsetBy: 4)
         range = start..<end
         val = String(str[range])
+        if(!numArray.contains(val)) {return(false)}
         let ty:Int = 8-Int(val)!
 
         if(position[sx][sy] == "") {return (false)}
@@ -1299,6 +1309,7 @@ extension ViewController {
             return (false)
         }
         movePiece(sx: sx, sy: sy, tx: tx, ty: ty)
+        changeColor()
         return(true)
 
         
@@ -1408,7 +1419,8 @@ extension ViewController {
             position[5][7] = "wn0"
             position[7][7] = "wk"
             enableBoard()
-            
+            banner.text = "Tap on a horizontal surface to place chessboard"
+            soundEnabled = true
 
         }
         if(boardType == 2) {
@@ -1432,7 +1444,8 @@ extension ViewController {
             position[0][7] = "wr0"
             position[4][7] = "wr1"
             enableBoard()
-            
+            banner.text = "Tap on a horizontal surface to place chessboard"
+            soundEnabled = true
 
         }
         

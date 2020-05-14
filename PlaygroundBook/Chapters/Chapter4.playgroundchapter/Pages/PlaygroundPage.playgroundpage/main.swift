@@ -1,15 +1,14 @@
 //: [Previous](@previous)
 /*:
  # Play with Another Device
- - Play with another using the same playgroundbook or the companion ChessReality app on the appstore.
- - Press **Run My Code** or "Play With Opponent" from LiveView and use **landscape** for best experience.
- - Pair with another device on your WiFi network - your id and your peerid will turn green when you pair. You may have to wait for 30sec-1min for the pairing to take place.
+ - Play with opponent with another device using the same playgroundbook or the companion ChessReality app on the appstore.
+ - Press **Run My Code** and use **landscape** for best experience.
+ - Pair with another device on your WiFi network - your id and your peerid will turn green when you pair. It may take between 30sec-1min for the pairing to take place.
  - Move your camera before tapping for board placement for better detection of horizontal feature points.
  - The first one who places the board plays white.
  - If you need a hint use the **yellow bulb** button.
  Enjoy! 😊
  */
-//: [Next](@next)
 //#-hidden-code
 import PlaygroundSupport
 import Foundation

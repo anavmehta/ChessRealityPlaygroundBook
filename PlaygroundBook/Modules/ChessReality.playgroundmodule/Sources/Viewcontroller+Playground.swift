@@ -34,6 +34,7 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
             case "wait":
                 if(planeAnchorAdded) {self.send(.string("wait"))}
             case "color":
+                if(allowMultipeerPlay) {return}
                 if(String(strArr[1]) == "w") {curColor = "w"}
                 else if(String(strArr[1]) == "b") {curColor = "b"}
             case "analyze":
@@ -41,13 +42,13 @@ extension ViewController {//}: PlaygroundLiveViewMessageHandler, PlaygroundLiveV
                 self.send(.string("analyze " + String(sx!) + " " + String(sy!) + " " + String(tx!) + " " + String(ty!)))
             case "sound":
                 if(strArr[1] == "true") {sound(enabled: true)}
-                else {sound(enabled: false)}
+                else if(strArr[1] == "false") {sound(enabled: false)}
             case "puzzle":
                 boardType = Int(strArr[1])!
                 setBoard()
             case "animation":
                 if(strArr[1] == "true") {animation(enabled: true)}
-                else {animation(enabled: false)}
+                else if(strArr[1] == "false") {animation(enabled: false)}
             case "move":
                 _ = move(str: String(strArr[1]))
             case "tap":

@@ -17,7 +17,7 @@ PlaygroundListener.shared.setup()
 //#-code-completion(identifier, show, true, false)
 /*:
  - play()
-    - Starts or resets the game in the mode it was set to.
+    - Starts the game in the mode it was set to.
 */
 play()
 /*:
@@ -86,4 +86,5 @@ move(best_move)
 color("b")
 best_move = analyze()
 //#-editable-code
+//move(best_move)// Uncomment the line for executing the move
 //#-end-editable-code

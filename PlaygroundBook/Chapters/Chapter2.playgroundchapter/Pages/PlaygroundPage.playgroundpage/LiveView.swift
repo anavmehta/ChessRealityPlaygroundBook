@@ -11,4 +11,6 @@ import UIKit
 import ChessReality
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = ViewController()
+let liveView = ViewController()
+liveView.customSC.isHidden = true
+PlaygroundPage.current.liveView = liveView

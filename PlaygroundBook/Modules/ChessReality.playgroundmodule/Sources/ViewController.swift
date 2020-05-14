@@ -40,17 +40,22 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
     var recordBanner:UILabel! = UILabel()
     var fenBanner:UILabel! = UILabel()
     var sessionInfoLabel: UILabel! = UILabel()
-    let items = ["Single Device", "Play With Computer", "Play With Opponent"]
-    var customSC: UISegmentedControl!
+    //let items = ["Single Device", "Play With Computer", "Play With Opponent"]
+    public var customSC: UISegmentedControl! = UISegmentedControl(items: items)
     var peerSessionIDs = [MCPeerID: String]()
     var hintButton: UIButton! = UIButton()
     public let hintImg = UIImage(named: "iconfinder_bulb_1511312")
     
     var gameFen: String = "position fen rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -"
     var castling: String = "-"
-    var curColor: String = "w"
-    var allowComputerPlay: Bool = false
-    var allowMultipeerPlay: Bool = false
+    var curColor: String = "w" {
+        didSet {
+            if(curColor == "w") {banner.text = "You are white"}
+            else {banner.text = "You are black"}
+        }
+    }
+    public var allowComputerPlay: Bool = false
+    public var allowMultipeerPlay: Bool = false
     var game: Entity!
     var computer: Game!
     var gameAnchored: Bool = false
@@ -80,6 +85,9 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
     let OKAction = UIAlertAction(title: "OK", style: .default)
     var peerToPlay: Bool = false
     
+    let charArray = ["a","b","c","d","e","f","g","h"]
+    let numArray = ["1","2","3","4","5","6","7","8"]
+    
     var planeAnchorAdded: Bool = false {
         didSet {
             if(planeAnchorAdded == true) {
@@ -101,7 +109,7 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
     public func animation(enabled: Bool) {
         animationEnabled = enabled
     }
-    
+
     func playSound(sound: Int) {
         var audioFilePath: String!
         if(!soundEnabled) {return}
@@ -178,7 +186,7 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
      }
  */
     
-    func restartGame() {
+    public func restartGame() {
         resetBoard()
         curColor = "w"
         recordBanner.text = ""
@@ -254,7 +262,11 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
 
     }
     
-    
+    func changeColor() {
+        if(allowMultipeerPlay) {return}
+        if(curColor == "w"){curColor = "b"}
+        else {curColor = "w"}
+    }
     func id(str: String) -> String {
         let start = str.firstIndex(of: "=") ?? str.endIndex
         return String(str[start..<str.endIndex])
@@ -393,6 +405,9 @@ PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
             
             if(!selectedBoard || (selectedPiece == nil)) {return}
             if(!isValidMove(coord: (endPosXY.0, endPosXY.1), coords: moves)) {
+                alertController.message = "Not a valid move"
+                self.present(alertController, animated: true, completion: nil)
+                playSound(sound: 0)
                 selectedBoard = false
                 return
             }
